@@ -43,57 +43,18 @@
 
     $input = str_replace(' ','',$_GET["input"]); //replace empty splace.
     Calculate($input);
-
-
-    //
-//
-//    ///[0-9]/
-//    if(preg_match("/[0-9]/",$input)){
-//        echo "test";
-//    }
-//    else{
-//        echo "not number";
-//    }
-
-
-//    if(preg_match('/(\d+)(?:\s*)([\+\-\*\/])(?:\s*)(\d+)/', $ma, $matches) !== FALSE){
-//        $operator = $matches[2];
-//
-//        switch($operator){
-//            case '+':
-//                $p = $matches[1] + $matches[3];
-//                break;
-//            case '-':
-//                $p = $matches[1] - $matches[3];
-//                break;
-//            case '*':
-//                $p = $matches[1] * $matches[3];
-//                break;
-//            case '/':
-//                $p = $matches[1] / $matches[3];
-//                break;
-//        }
-//
-//        echo $p;
-//    }
-
-
-
     ?>
-
 </h2>
-
 <div>
     <ul>
         <li>Only numbers, +, -, *, and / operators are allowed in input textbox.</li>
         <li>The operators are left-associate and / and * operators have precedence over + and -. </li>
         <li>Integer and decimal numbers are allowed.</li>
+        <li>0/0 will not return anything basing on giving specs.</li>
         <li>leading zeros will be disregarded.</li>
         <li>Calculator does not support parentheses.</li>
         <li>Calculator handles errors gracefully and will not return PHP error message.</li>
     </ul>
 </div>
-
 </body>
-
 </html>
