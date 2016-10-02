@@ -14,35 +14,37 @@
 <h2> Result:
     <?php
     function Calculate($equation){
+        $cal = "";
         if(preg_match('/([a-z])/',$equation)){ //check for valid numbers.
-            echo "Invalid Expression. Not a number.";
+            $cal = "Invalid Expression. Not a number.";
         }
         elseif(preg_match('/[(\)]/',$equation)){ //check for parenthesis.
-            echo "Invalid Expression. No parenthesis is allowed.";
+            $cal = "Invalid Expression. No parenthesis is allowed.";
         }
         elseif(preg_match('/([\+\-\*\/])/',$equation)){ //check for valid math operators.
             if(preg_match('/[1-9]\/[0]/',$equation)){ //check for divisible by 0. 0/0 will not show basing on giving specs.
-                echo "Invalid Expression. Division by zero error.";
+                $cal = "Invalid Expression. Division by zero error.";
             }
             else{
                 $value = eval('return '.$equation.';');
-                echo $equation." = ".$value;
+                $cal = $equation." = ".$value;
             }
         }
         else{
             if(preg_match('/./',$equation)){//return leading 0 for decimal input.
                 $value = floatval($equation);
-                echo $equation." = ".$value;
+                $cal = $equation." = ".$value;
             }
             else{
                 $value = floatval($equation);
-                echo $equation." = ".$value;
+                $cal = $equation." = ".$value;
             }
         }
+        return $cal;
     }
 
     $input = str_replace(' ','',$_GET["input"]); //replace empty splace.
-    Calculate($input);
+    echo Calculate($input);
     ?>
 </h2>
 <div>
