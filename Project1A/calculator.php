@@ -13,8 +13,13 @@
 
 <h2> Result:
     <?php
-    function Calculate($equation){
-        $cal = "";
+    function Calculate($input){
+        if(preg_match('/\s/',$input) and !preg_match('/([\+\-\*\/])/',$input)){
+            return "Invalid Expression. Ambiguous Number.";
+        }
+        else{
+            $equation = str_replace(' ','',$input);
+        }
         if(preg_match('/([a-z])/',$equation)){ //check for valid numbers.
             $cal = "Invalid Expression. Not a number.";
         }
@@ -43,7 +48,7 @@
         return $cal;
     }
 
-    $input = str_replace(' ','',$_GET["input"]); //replace empty splace.
+    $input = $_GET["input"]; //str_replace(' ','',$_GET["input"]); //replace empty splace.
     echo Calculate($input);
     ?>
 </h2>
