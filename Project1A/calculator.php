@@ -50,8 +50,9 @@
         return $cal;
     }
 
-    $input = $_GET["input"]; //str_replace(' ','',$_GET["input"]); //replace empty splace.
+    $input = trim($_GET["input"]); //trim leading and ending spaces.
     echo Calculate($input);
+
     ?>
 </h2>
 <div>
