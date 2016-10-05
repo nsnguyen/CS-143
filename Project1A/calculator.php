@@ -14,20 +14,22 @@
 <h2> Result:
     <?php
     function Calculate($input){
+        if(preg_match('/([a-z])/',$input)){
+            return "Invalid Expression. Not a number.";
+        }
+
         if(preg_match('/\s/',$input) and !preg_match('/([\+\-\*\/])/',$input)){
             return "Invalid Expression. Ambiguous Number.";
         }
         else{
             $equation = str_replace(' ','',$input);
         }
-        if(preg_match('/([a-z])/',$equation)){ //check for valid numbers.
-            $cal = "Invalid Expression. Not a number.";
-        }
-        elseif(preg_match('/[(\)]/',$equation)){ //check for parenthesis.
+
+        if(preg_match('/[(\)]/',$equation)){ //check for parenthesis.
             $cal = "Invalid Expression. No parenthesis is allowed.";
         }
         elseif(preg_match('/([\+\-\*\/])/',$equation)){ //check for valid math operators.
-            if(preg_match('/[1-9]\/[0]/',$equation)){ //check for divisible by 0. 0/0 will not show basing on giving specs.
+            if(preg_match('/[0-9]\/[0]/',$equation)){ //check for divisible by 0. 0/0 will not show basing on giving specs.
                 $cal = "Invalid Expression. Division by zero error.";
             }
             else{
