@@ -54,7 +54,7 @@
         ?>
     </h2>
 </form>
-    
+
 <div>
     <ul>
         <li>Only numbers, +, -, *, and / operators are allowed in input textbox.</li>
