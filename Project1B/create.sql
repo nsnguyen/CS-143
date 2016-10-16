@@ -10,6 +10,7 @@ CREATE TABLE Movie(id INT NOT NULL -- Movie Id
                   ,company varchar(50) -- Production company
                   ,PRIMARY KEY(id)
                   ,CHECK(id > 0 AND Movie.year > 0 AND id <=MaxMovieID.id)) ENGINE = INNODB;
+#id has to be greater than 0 but under MaxMovie Id as defined below. Year has to be positive.
 
 DROP TABLE IF EXISTS Actor;
 /*This table describes information regarding actors and actresses of movies.*/
@@ -18,7 +19,7 @@ CREATE TABLE Actor(id INT NOT NULL -- Actor ID
                     ,first VARCHAR(20) -- first name
                     ,sex VARCHAR(6) -- sex of the actor
                     ,dob DATE  NOT NULL -- date of birth
-                    ,dod DATE -- date of death
+                    ,dod DATE DEFAULT  NULL-- date of death
                     ,PRIMARY KEY(id)
                     ,CHECK(id > 0 AND id <= MaxPersonID.id)) ENGINE = INNODB;
 
@@ -28,7 +29,7 @@ CREATE TABLE Director(id INT NOT NULL-- Director Id
                       ,last VARCHAR(20) -- last name
                       ,first VARCHAR(20) -- first name
                       ,dob DATE NOT NULL -- date of birth
-                      ,dod DATE -- date of death
+                      ,dod DATE DEFAULT  NULL-- date of death
                       ,PRIMARY KEY(id)
                       ,CHECK(id > 0 and id <= MaxPersonID.id)) ENGINE = INNODB;
 
@@ -55,12 +56,13 @@ CREATE TABLE MovieActor(mid INT -- movie Id
 
 DROP TABLE IF EXISTS Review;
 /*Reviews of a movie.*/
-CREATE TABLE Review(name varchar(20) -- Reviewer name
-                    ,time TIMESTAMP -- Review time
+CREATE TABLE Review(name varchar(20) NOT NULL-- Reviewer name
+                    ,time TIMESTAMP NOT NULL-- Review time
                     ,mid INT -- movie Id
-                    ,rating INT -- review rating
+                    ,rating INT NOT NULL-- review rating
                     ,comment varchar(500) -- reviewer comment
-                    ,FOREIGN KEY(mid) REFERENCES Movie(id)) ENGINE = INNODB;
+                    ,FOREIGN KEY(mid) REFERENCES Movie(id)
+                    ,CHECK(rating >= 0 and rating <=5)) ENGINE = INNODB;
 
 DROP TABLE IF EXISTS MaxPersonID;
 /*max person Id which will be used to assign new person Id.*/
