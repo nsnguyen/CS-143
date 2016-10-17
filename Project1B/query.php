@@ -8,14 +8,17 @@
     <h5>Created by Nguyen Si Nguyen UID: 004870721</h5>
 
     <form method="GET">
-        <textarea name="query" cols="60" rows="10"></textarea><br />
+        <textarea align="left" name="query" cols="60" rows="10" placeholder="Type in a query..."><?php
+            $sql = trim($_GET["query"]);
+            echo $sql;
+            ?></textarea><br />
         <input type="submit" value="Submit" />
     </form>
     <table border=1 cellspacing=0 cellpadding=1>
         <tr>
     <?php
 
-    $sql = $_GET["query"];
+    #$sql = $_GET["query"];
     $servername = "localhost";
     $username = "cs143";
     $password = "";
