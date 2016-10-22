@@ -7,72 +7,56 @@
     <h1>CS143 - Calculator</h1>
     <h5>Created by Nguyen Si Nguyen UID: 004870721</h5>
 
+    <h4>Please note that the query is case sensitive.</h4>
+    <h5>Example Query to show all attributes for first 5 tuples: SELECT * FROM Movie LIMIT 5;</h5>
     <form method="GET">
         <textarea align="left" name="query" cols="60" rows="10" placeholder="Type in a query..."><?php
             $sql = trim($_GET["query"]);
-            echo $sql;
+            printf($sql);
             ?></textarea><br />
         <input type="submit" value="Submit" />
     </form>
-    <table border=1 cellspacing=0 cellpadding=1>
-        <tr>
-    <?php
 
-    #$sql = $_GET["query"];
-    $servername = "localhost";
-    $username = "cs143";
-    $password = "";
-    $database = "TEST";
+    <br/><?php
+    $server = "localhost";
+    $user = "cs143";
+    $psswrd = "";
+    $database = "CS143";
 
-    if(!$conn = mysql_connect($servername,$username,$password)){
-        echo "Could not connect to mySQL server.";
-        exit;
+    $mysqli = new mysqli($server,$user,$psswrd,$database);
+
+    if($mysqli-> connect_errno){
+        printf($mysqli->connect_error);
+        exit();
     }
 
-    if(!mysql_select_db($database,$conn)){
-        echo "Could not select database.";
-        exit;
+    if(!$mysqli->query($sql)){
+        printf($mysqli->error);
+        exit();
     }
 
-    $result = mysql_query($sql,$conn);
+    if($result = $mysqli->query($sql)) {
+        printf('<table border=1 cellspacing=1 cellpadding=1><tr>');
 
-    if(!result){
-        echo "DB Error, Could not query the database.\n";
-        echo "mySQL Error: " . mysql_error();
-        exit;
-    }
-
-    #Getting attribute names.
-    $numFields = mysql_numfields($result);
-    for($i=0; $i < $numFields; $i++){
-        $obj = mysql_fetch_field($result,$i);
-        echo '<td><b>' . $obj->name . '</b></td>';
-    }
-    echo '<tr>';
-
-    #fetching data each row.
-    while($row = mysql_fetch_row($result)){
-        for($x=0; $x < $numFields; $x++){
-            if ($row[$x] == NULL){
-                echo '<td>N/A</td>';}
-            else{
-                echo '<td>' . $row[$x] . '</td>';
-            }
+        #print headers in bold
+        while ($info = $result->fetch_field()) {#loop header
+            printf('<td><b>' . $info->name . '</b></td>');
         }
-        echo '</td><tr>';
+        printf('</tr><tr>');
+
+        #print data in bolds
+        while ($row = $result->fetch_row()) {#loop data
+            for ($x = 0; $x < $result->field_count; $x++) {
+                $row[$x] == NULL ? printf('<td>N/A</td>') : printf('<td>' . $row[$x] . '</td>');
+            }
+            printf('</td><tr>');
+        }
+        printf('</tr></table>');
+
+        #close connection.
+        $mysqli->close();
     }
-    echo '</tr></table>';
-
-    #free result and close connection.
-    mysql_free_result($result);
-    mysql_close($conn);
-
     ?>
-
-
-        </tr>
-    </table>
 </body>
-
 </html>
 
