@@ -17,8 +17,8 @@
 
     <h2>Search for an Actor</h2>
     <form method="POST">
-        <input type="text" id="actorInput" name="query" placeholder="Search for an actor. Leave blank if you want to search for all actors..." size = "100">
-        <input type="submit" value="Find Actor(s)">
+        <input type="text" id="actorInput" name="input" placeholder="Search for an actor. Leave blank if you want to search for all actors..." size = "100">
+        <input type="submit" value="Find Actor(s)" name="submit">
 
     </form>
 
@@ -33,19 +33,58 @@
 
 
 <?php
-$server = "localhost";
-$user = "cs143";
-$pass = "";
-$database = "CS143";
-
-$mysqli = new mysqli($server,$user,$pass,$database);
-
-if($mysqli->connect_errno){
-    printf($mysqli->connect_error);
-    exit();
+if(isset($_POST['submit'])){
+    QueryActor();
 }
 
-$result = $mysqli->query("SELECT * FROM Actor;");
 
+function QueryActor(){
+    $server = "localhost";
+    $user = "cs143";
+    $pass = "";
+    $database = "CS143";
+    $input = trim($_POST["input"]);
+
+
+    $mysqli = new mysqli($server,$user,$pass,$database);
+
+    if($mysqli->connect_errno){
+        printf($mysqli->connect_error);
+        exit();
+    }
+
+    $result = $mysqli->query("SELECT * FROM Actor 
+                              WHERE first LIKE '%". $input . "%' 
+                              OR last LIKE '%".$input."%';");
+
+    if(!$result){
+        printf($mysqli->error);
+        exit();
+    }
+    else{
+        printf('<table border=1 cellspacing=1 cellpadding=1><tr>');
+
+        printf('<td><b>Name</b></td>');
+        printf('<td><b>Movie</b></td>');
+
+        #print headers in bold
+        while ($info = $result->fetch_field()) {#loop header
+            printf('<td><b>' . $info->name . '</b></td>');
+        }
+        printf('</tr><tr>');
+
+        #print data in bolds
+        while ($row = $result->fetch_row()) {#loop data
+            for ($x = 0; $x < $result->field_count; $x++) {
+                $row[$x] == NULL ? printf('<td>N/A</td>') : printf('<td>' . $row[$x] . '</td>');
+            }
+            printf('</td><tr>');
+        }
+        printf('</tr></table>');
+
+        #close connection.
+        $mysqli->close();
+    }
+}
 
 ?>
