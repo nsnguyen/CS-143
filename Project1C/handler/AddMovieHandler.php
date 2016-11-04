@@ -1,5 +1,10 @@
 <?php
-include("model/InsertData.php");
+require 'InsertData.php';
+
+//error_reporting(E_ALL);
+//ini_set("display_errors","On");
+//
+//echo $_SERVER['DOCUMENT_ROOT'];
 
 
 $title = $_REQUEST['title'];
@@ -7,29 +12,14 @@ $year = $_REQUEST['year'];
 $company = $_REQUEST['company'];
 $rating = $_REQUEST['rating'];
 $genre = $_REQUEST['genre'];
-$submit = $_REQUEST['submit'];
 
-//echo $title;
-//echo $year;
-//echo $company;
-//echo $rating;
-//echo $genre;
-//echo $submit;
 
-$insertData = new InsertData();
-$response = $insertData->Test();
+if($title !== "" && $year !== "" && $company!=="" && $rating !=="" && $genre !==""){
+    $insertData = new InsertData();
+    echo $insertData->InsertMovie($title,$year,$company,$rating,$genre);
+}
 
-echo $response;
 
-//
-//
-//if(true){
-//    $insertData = new InsertData();
-//    echo "nice";
-//    echo $insertData->InsertMovie($title,$year,$company,$rating,$genre);
-//}
-//
-//
 
 
 

@@ -154,8 +154,6 @@
 
 
 
-        var genre = document.getElementById('genre').value;
-
         document.getElementById("submit").onclick = function() { InsertMovie(); };
 
 
@@ -186,6 +184,7 @@
             else if(document.getElementById('rRadio7').checked){
                 rating = document.getElementById('rRadio7').value;
             }
+            var genre = document.getElementById('genre').value;
 
 
             httpRequest = new XMLHttpRequest();
@@ -205,7 +204,8 @@
         function alertContents() {
             if (httpRequest.readyState === XMLHttpRequest.DONE) {
                 if (httpRequest.status === 200) {
-                    alert(httpRequest.responseText);
+                    //alert(httpRequest.responseText);
+                    document.getElementById('response').innerHTML = httpRequest.responseText;
                 } else {
                     alert('There was a problem with the request.');
                 }
@@ -216,8 +216,6 @@
 
 
 </script>
-<?php include ("handler/AddMovieHandler.php");
-?>
 
 </body>
 </html>
