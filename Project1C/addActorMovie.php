@@ -49,6 +49,14 @@
     </div>
 
     <form class="form-horizontal">
+
+        <div class="form-group">
+            <label class="col-sm-3" for="searchActor">Search Actor</label>
+            <input type="text" class="col-sm-3 form-control" id = "searchActor" name="searchActor">
+            <label class="col-sm-3" for="searchMovie">Search Movie</label>
+            <input type="text" class="col-sm-3 form-control" id = "searchMovie" name="searchMovie">
+        </div>
+
         <div class="form-group">
             <label class="col-sm-3" for="actors">List of Actors</label>
             <select id="actors" name="actors" class="col-sm-6"></select>
@@ -60,6 +68,11 @@
             <label class="col-sm-3" for="movies">List of Movies</label>
             <select id="movies" name="movies" class="col-sm-6"></select>
 
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-3"></div>
+            <button type="button" id = "submit" class="btn btn-success col-sm-2" name="submit">Submit</button>
         </div>
     </form>
 
@@ -84,15 +97,51 @@
         var httpRequest1;
         var httpRequest2;
 
-        var response = {
+        var httpRequest;
+
+        var request = {
             obj1: "",
             moviesString: "",
             obj2: "",
             actorsString: "",
-            temp:""
+            temp:"",
+            searchMovie:""
         };
 
-        window.onload = LoadNames;
+        document.getElementById("submit").onclick = function() { SearchMovie(); };
+
+
+        function SearchMovie(){
+
+            request.searchMovie = document.getElementById('searchMovie').value;
+
+
+            httpRequest = new XMLHttpRequest();
+
+            if (!httpRequest) {
+                alert('Giving up :( Cannot create an XMLHTTP instance');
+                return false;
+            }
+
+            httpRequest.onreadystatechange = alertContents;
+            httpRequest.open('GET', 'handler/searchMovieHandler.php?searchTitle='+encodeURI(request.searchMovie),true);
+            httpRequest.send();
+
+        }
+
+        function alertContents() {
+            if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                if (httpRequest.status === 200) {
+                    //alert(httpRequest.responseText);
+                    document.getElementById('response').innerHTML = httpRequest.responseText;
+                } else {
+                    alert('There was a problem with the request.');
+                }
+            }
+        }
+
+/////////////////////////////////////////////////////////////////////
+        //window.onload = LoadNames;
 
         function LoadNames(){
             SelectMovie();
@@ -115,20 +164,20 @@
         function alertContentsMovie() {
             if (httpRequest1.readyState === XMLHttpRequest.DONE) {
                 if (httpRequest1.status === 200) {
-                    response.obj1 = JSON.parse(httpRequest1.responseText);
-                    for (var i=0; i<response.obj1.length;i++){
-                        response.moviesString += '<option value="'+response.obj1[i].id+'">' +response.obj1[i].title + ' (' +response.obj1[i].year+ ')</option>';
+                    request.obj1 = JSON.parse(httpRequest1.responseText);
+                    for (var i=0; i<request.obj1.length; i++){
+                        request.moviesString += '<option value="'+request.obj1[i].id+'">' +request.obj1[i].title + ' (' +request.obj1[i].year+ ')</option>';
                     }
                 } else {
                     alert('There was a problem with the request.');
                 }
-                document.getElementById('movies').innerHTML += response.moviesString;
+                document.getElementById('movies').innerHTML += request.moviesString;
             }
-            delete response.obj1;
-            delete response.moviesString;
+            delete request.obj1;
+            delete request.moviesString;
 
-            console.log(response.obj1);
-            console.log(response.moviesString);
+            console.log(request.obj1);
+            console.log(request.moviesString);
 
         }
 
@@ -149,20 +198,20 @@
             if (httpRequest2.readyState === XMLHttpRequest.DONE) {
 
                 if (httpRequest2.status === 200) {
-                    response.obj2 = JSON.parse(httpRequest2.responseText);
-                    for (var j=0; j<response.obj2.length;j++){
-                        response.actorsString += '<option value="'+response.obj2[j].id+'">' +response.obj2[j].first +' ' + response.obj2[j].last+ ' (' +response.obj2[j].dob+ ')</option>';
+                    request.obj2 = JSON.parse(httpRequest2.responseText);
+                    for (var j=0; j<request.obj2.length; j++){
+                        request.actorsString += '<option value="'+request.obj2[j].id+'">' +request.obj2[j].first +' ' + request.obj2[j].last+ ' (' +request.obj2[j].dob+ ')</option>';
                     }
                 } else {
                     alert('There was a problem with the request.');
                 }
-                document.getElementById('actors').innerHTML += response.actorsString;
+                document.getElementById('actors').innerHTML += request.actorsString;
             }
-            delete response.obj2;
-            delete response.actorsString;
+            delete request.obj2;
+            delete request.actorsString;
 
-            console.log(response.obj2);
-            console.log(response.actorsString);
+            console.log(request.obj2);
+            console.log(request.actorsString);
     }
 
 

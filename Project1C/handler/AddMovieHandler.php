@@ -15,8 +15,8 @@ $genre = $_REQUEST['genre'];
 
 
 if($title !== "" && $year !== "" && $company!=="" && $rating !=="" && $genre !==""){
-    $insertData = new InsertData();
-    echo $insertData->InsertMovie($title,$year,$company,$rating,$genre);
+    $dataRequest = new DataRequest();
+    echo $dataRequest->InsertMovie($title,$year,$company,$rating,$genre);
 }
 else{
     echo "Insufficient Values. Enter all input values.";

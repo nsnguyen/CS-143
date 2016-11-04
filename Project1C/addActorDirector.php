@@ -120,27 +120,35 @@
 
     (function() {
         var httpRequest;
+        var request = {
+            first: "",
+            last: "",
+            dob: "",
+            dod: "",
+            gender:"",
+            type:""
+        }
 
         document.getElementById("submit").onclick = function() { InsertActorDirector(); };
 
         function InsertActorDirector(){
-            var first = document.getElementById('first').value;
-            var last = document.getElementById('last').value;
-            var dob = document.getElementById('dob').value;
-            var dod = document.getElementById('dod').value;
+            request.first = document.getElementById('first').value;
+            request.last = document.getElementById('last').value;
+            request.dob = document.getElementById('dob').value;
+            request.dod = document.getElementById('dod').value;
 
             if(document.getElementById('gRadio1').checked){
-                var gender = document.getElementById('gRadio1').value;
+                request.gender = document.getElementById('gRadio1').value;
             }
             else if(document.getElementById('gRadio2').checked){
-                var gender = document.getElementById('gRadio2').value;
+                request.gender = document.getElementById('gRadio2').value;
             }
 
             if(document.getElementById('aRadio1').checked){
-                var type = document.getElementById('aRadio1').value;
+                request.type = document.getElementById('aRadio1').value;
             }
             else if(document.getElementById('aRadio2').checked){
-                var type = document.getElementById('aRadio2').value;
+                request.type = document.getElementById('aRadio2').value;
             }
 
 
@@ -152,7 +160,7 @@
             }
 
             httpRequest.onreadystatechange = alertContents;
-            httpRequest.open('GET', 'handler/AddActorDirectorHandler.php?ActorDirectorRadios='+encodeURI(type)+'&first='+encodeURI(first)+'&last='+encodeURI(last)+'&genderRadios='+encodeURI(gender)+'&dob='+encodeURI(dob)+'&dod='+encodeURI(dod),true);
+            httpRequest.open('GET', 'handler/AddActorDirectorHandler.php?ActorDirectorRadios='+encodeURI(request.type)+'&first='+encodeURI(request.first)+'&last='+encodeURI(request.last)+'&genderRadios='+encodeURI(request.gender)+'&dob='+encodeURI(request.dob)+'&dod='+encodeURI(request.dod),true);
             httpRequest.send();
 
         }

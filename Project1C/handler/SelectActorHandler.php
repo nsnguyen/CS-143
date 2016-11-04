@@ -1,8 +1,8 @@
 <?php
 require 'DataRequest.php';
 
-$insertData = new InsertData();
-echo $insertData->SelectActor();
+$dataRequest = new DataRequest();
+echo $dataRequest->SelectActor();
 
 
 ?>

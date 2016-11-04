@@ -1,8 +1,8 @@
 <?php
 require 'DataRequest.php';
 
-$insertData = new InsertData();
-echo $insertData->SelectMovie();
+$dataRequest = new DataRequest();
+echo $dataRequest->SelectMovie();
 
 
 ?>
