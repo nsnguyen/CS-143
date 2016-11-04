@@ -38,7 +38,7 @@
                 <li><a href="addDirectorMovie.php">Add Director/Movie Relation</a></li>
                 <li><a href="search.php">Search</a></li>
             </ul>
-        </div><!--/.nav-collapse -->
+        </div>
     </div>
 </nav>
 
@@ -46,18 +46,17 @@
 
     <div class="starter">
         <h1>This is where you can add Actor and Movie Relation.</h1>
+        <h4>Select Actor and Movie relationship. Add their roles. </h4>
     </div>
 
-</div><!-- /.container -->
+    <div
+
+</div>
 
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-3.1.1.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/angular.min.js"></script>
+
 
 </body>
 </html>

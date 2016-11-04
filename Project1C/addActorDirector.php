@@ -66,11 +66,11 @@
 
         <div class="form-group">
             <label class="col-sm-3 text-right" for="firstName">First Name</label>
-            <input class ="col-sm-8" type="text" class="form-control" id="firstName" placeholder="Enter First Name..." name="first" >
+            <input class ="col-sm-8" type="text" class="form-control" id="first" placeholder="Enter First Name..." name="first" >
         </div>
         <div class="form-group">
             <label class = "col-sm-3 text-right" for="lastName">Last Name</label>
-            <input class = "col-sm-8" type="text" class="form-control" id="lastName" placeholder="Enter Last Name..." name="last" >
+            <input class = "col-sm-8" type="text" class="form-control" id="last" placeholder="Enter Last Name..." name="last" >
         </div>
 
         <div class="form-group">
@@ -98,7 +98,13 @@
             <input class = "col-sm-8" type="text" class="form-control" id="dod" placeholder="Enter Date of Death..." name ="dod">
         </div>
 
-        <button type="submit" name="submit" class="btn btn-success">Submit</button>
+        <div class="form-group">
+            <div class="col-sm-3"></div>
+            <button type="button" id = "submit" class="btn btn-success col-sm-2" name="submit">Submit</button>
+        </div>
+
+
+        <div class="col-sm-12 text-center" id="response"></div>
 
     </form>
 
@@ -109,43 +115,67 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/angular.min.js"></script>
 
-<script>
-    function InsertActorDirector(){
-        var first = document.getElementById('first').value;
-        var last = document.getElementById('last').value;
-        var dob = document.getElementById('dob').value;
-        var dod = document.getElementById('dod').value;
+<script type="text/javascript">
 
-        if(document.getElementById('gRadio1').checked){
-            var gender = document.getElementById('gRadio1').value;
+    (function() {
+        var httpRequest;
+
+        document.getElementById("submit").onclick = function() { InsertActorDirector(); };
+
+        function InsertActorDirector(){
+            var first = document.getElementById('first').value;
+            var last = document.getElementById('last').value;
+            var dob = document.getElementById('dob').value;
+            var dod = document.getElementById('dod').value;
+
+            if(document.getElementById('gRadio1').checked){
+                var gender = document.getElementById('gRadio1').value;
+            }
+            else if(document.getElementById('gRadio2').checked){
+                var gender = document.getElementById('gRadio2').value;
+            }
+
+            if(document.getElementById('aRadio1').checked){
+                var type = document.getElementById('aRadio1').value;
+            }
+            else if(document.getElementById('aRadio2').checked){
+                var type = document.getElementById('aRadio2').value;
+            }
+
+
+            httpRequest = new XMLHttpRequest();
+
+            if (!httpRequest) {
+                alert('Giving up :( Cannot create an XMLHTTP instance');
+                return false;
+            }
+
+            httpRequest.onreadystatechange = alertContents;
+            httpRequest.open('GET', 'handler/AddActorDirectorHandler.php?ActorDirectorRadios='+type+'&first='+first+'&last='+last+'&genderRadios='+gender+'&dob='+dob+'&dod='+dod);
+            httpRequest.send();
+
+
         }
-        else if(document.getElementById('gRadio2').checked){
-            var gender = document.getElementById('gRadio2').value;
-        }
-
-        if(document.getElementById('aRadio1').checked){
-            var type = document.getElementById('aRadio1').value;
-        }
-        else if(document.getElementById('aRadio2').checked){
-            var type = document.getElementById('aRadio2').value;
-        }
 
 
-        var request = new XMLHttpRequest();
-        request.onreadystatechange = function(){
-            if(this.readyState == 4 && this.status == 200){
-                document.getElementById('response').innerHTML = this.responseText;
+        function alertContents() {
+            if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                if (httpRequest.status === 200) {
+                    //alert(httpRequest.responseText);
+                    document.getElementById('response').innerHTML = httpRequest.responseText;
+                } else {
+                    alert('There was a problem with the request.');
+                }
             }
         }
-        request.open("GET","handler/AddActorDirectorHandler.php?ActorDirectorRadios="+type+"&first="+first+"&last="+last+"&genderRadios="+gender+"&dob="+dob+"&dod="+dod);
-        request.send();
-    }
+    })();
 
-    }
+
+
+
 </script>
-<?php include ("handler/AddActorDirectorHandler.php"); ?>
+
 
 
 </body>

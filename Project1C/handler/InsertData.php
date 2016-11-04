@@ -7,6 +7,9 @@ class InsertData
     public $pass = "";
     public $database = "CS143";
 
+    public function Test(){
+        return "Test";
+    }
 
     public function InsertMovie($title,$year,$company,$rating,$genre){
         if(!is_numeric($year)){
@@ -102,11 +105,7 @@ class InsertData
 
     }
 
-
-
-
-
-    public function SelectMovie($title,$year,$company,$rating,$genre){
+    public function SelectMovie(){
 
 
         $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
@@ -130,7 +129,6 @@ class InsertData
             $mysqli->close();
             return json_encode($rows);
         }
-
 
     }
 }
