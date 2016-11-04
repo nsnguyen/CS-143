@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CS143 Movie Database</title>
+    <title>Add Actor or Director</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -120,27 +120,35 @@
 
     (function() {
         var httpRequest;
+        var request = {
+            first: "",
+            last: "",
+            dob: "",
+            dod: "",
+            gender:"",
+            type:""
+        }
 
         document.getElementById("submit").onclick = function() { InsertActorDirector(); };
 
         function InsertActorDirector(){
-            var first = document.getElementById('first').value;
-            var last = document.getElementById('last').value;
-            var dob = document.getElementById('dob').value;
-            var dod = document.getElementById('dod').value;
+            request.first = document.getElementById('first').value;
+            request.last = document.getElementById('last').value;
+            request.dob = document.getElementById('dob').value;
+            request.dod = document.getElementById('dod').value;
 
             if(document.getElementById('gRadio1').checked){
-                var gender = document.getElementById('gRadio1').value;
+                request.gender = document.getElementById('gRadio1').value;
             }
             else if(document.getElementById('gRadio2').checked){
-                var gender = document.getElementById('gRadio2').value;
+                request.gender = document.getElementById('gRadio2').value;
             }
 
             if(document.getElementById('aRadio1').checked){
-                var type = document.getElementById('aRadio1').value;
+                request.type = document.getElementById('aRadio1').value;
             }
             else if(document.getElementById('aRadio2').checked){
-                var type = document.getElementById('aRadio2').value;
+                request.type = document.getElementById('aRadio2').value;
             }
 
 
@@ -152,12 +160,10 @@
             }
 
             httpRequest.onreadystatechange = alertContents;
-            httpRequest.open('GET', 'handler/AddActorDirectorHandler.php?ActorDirectorRadios='+type+'&first='+first+'&last='+last+'&genderRadios='+gender+'&dob='+dob+'&dod='+dod);
+            httpRequest.open('GET', 'handler/AddActorDirectorHandler.php?ActorDirectorRadios='+encodeURI(request.type)+'&first='+encodeURI(request.first)+'&last='+encodeURI(request.last)+'&genderRadios='+encodeURI(request.gender)+'&dob='+encodeURI(request.dob)+'&dod='+encodeURI(request.dod),true);
             httpRequest.send();
 
-
         }
-
 
         function alertContents() {
             if (httpRequest.readyState === XMLHttpRequest.DONE) {
@@ -173,10 +179,7 @@
 
 
 
-
 </script>
-
-
 
 </body>
 </html>

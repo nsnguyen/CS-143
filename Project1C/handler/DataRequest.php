@@ -1,6 +1,6 @@
 <?php
 
-class InsertData
+class DataRequest
 {
     public $server = "localhost";
     public $user = "cs143";
@@ -131,4 +131,52 @@ class InsertData
         }
 
     }
+
+    public function SearchMovie($searchTitle){
+        $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
+
+        if($mysqli->connect_errno){
+            printf($mysqli->connect_error);
+            exit();
+        }
+
+        $result = $mysqli->query("SELECT * FROM Movie WHERE title LIKE '%$searchTitle%'");
+
+        if(!$result){
+            printf($mysqli->error);
+            exit();
+        }
+        else{
+            while($r = $result->fetch_assoc()){
+                $rows[] = $r;
+            }
+            $mysqli->close();
+            return json_encode($rows);
+        }
+
+    }
+
+    public function SelectActor(){
+
+        $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
+        if($mysqli->connect_errno){
+            printf($mysqli->connect_error);
+            exit();
+        }
+
+        $result = $mysqli->query("SELECT * FROM Actor;");
+        if(!$result){
+            printf($mysqli->error);
+            exit();
+        }
+        else{
+            while($r = $result->fetch_assoc()){
+                $rows[] = $r;
+            }
+            $mysqli->close();
+            return json_encode($rows);
+        }
+    }
+
+
 }

@@ -1,5 +1,5 @@
 <?php
-require 'InsertData.php';
+require 'DataRequest.php';
 
 $type = $_REQUEST['ActorDirectorRadios'];
 $first = $_REQUEST['first'];
@@ -10,10 +10,12 @@ $dod = $_REQUEST['dod'];
 
 
 if($type !== "" && $first !=="" && $last !=="" && $gender !=="" && $dob !=""){
-    $insertData = new InsertData();
-    echo $insertData->InsertActorDirector($type,$first,$last,$gender,$dob,$dod);
+    $dataRequest = new DataRequest();
+    echo $dataRequest->InsertActorDirector($type,$first,$last,$gender,$dob,$dod);
 }
-
+else{
+    echo "Insufficient Values. Enter all input values.";
+}
 
 
 ?>

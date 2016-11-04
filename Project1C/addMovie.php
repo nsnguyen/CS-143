@@ -151,40 +151,45 @@
 <script type="text/javascript">
     (function() {
         var httpRequest;
+        var request = {
+            title:"",
+            year:"",
+            company:"",
+            rating:"",
+            genre:""
 
-
+        }
 
         document.getElementById("submit").onclick = function() { InsertMovie(); };
 
-
         function InsertMovie(){
 
-            var title = document.getElementById('title').value;
-            var year = document.getElementById('year').value;
-            var company = document.getElementById('company').value;
-            var rating;
+            request.title = document.getElementById('title').value;
+            request.year = document.getElementById('year').value;
+            request.company = document.getElementById('company').value;
+
             if(document.getElementById('rRadio1').checked){
-                rating = document.getElementById('rRadio1').value;
+                request.rating = document.getElementById('rRadio1').value;
             }
             else if(document.getElementById('rRadio2').checked){
-                rating = document.getElementById('rRadio2').value;
+                request.rating = document.getElementById('rRadio2').value;
             }
             else if(document.getElementById('rRadio3').checked){
-                rating = document.getElementById('rRadio3').value;
+                request.rating = document.getElementById('rRadio3').value;
             }
             else if(document.getElementById('rRadio4').checked){
-                rating = document.getElementById('rRadio4').value;
+                request.rating = document.getElementById('rRadio4').value;
             }
             else if(document.getElementById('rRadio5').checked) {
-                rating = document.getElementById('rRadio5').value;
+                request.rating = document.getElementById('rRadio5').value;
             }
             else if(document.getElementById('rRadio6').checked){
-                rating = document.getElementById('rRadio6').value;
+                request.rating = document.getElementById('rRadio6').value;
             }
             else if(document.getElementById('rRadio7').checked){
-                rating = document.getElementById('rRadio7').value;
+                request.rating = document.getElementById('rRadio7').value;
             }
-            var genre = document.getElementById('genre').value;
+            request.genre = document.getElementById('genre').value;
 
 
             httpRequest = new XMLHttpRequest();
@@ -195,11 +200,10 @@
             }
 
             httpRequest.onreadystatechange = alertContents;
-            httpRequest.open('GET', 'handler/AddMovieHandler.php?title='+title+'&year='+year+'&company='+company+'&rating='+rating+'&genre='+genre);
+            httpRequest.open('GET', 'handler/AddMovieHandler.php?title='+encodeURI(request.title)+'&year='+encodeURI(request.year)+'&company='+encodeURI(request.company)+'&rating='+encodeURI(request.rating)+'&genre='+encodeURI(request.genre),true);
             httpRequest.send();
 
         }
-
 
         function alertContents() {
             if (httpRequest.readyState === XMLHttpRequest.DONE) {
