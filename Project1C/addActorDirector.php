@@ -50,13 +50,13 @@
     </div>
     <form class="form-horizontal">
         <div class="form-group">
-            <div class="radio col-sm-2">
+            <div class="radio col-sm-3 text-right">
                 <label>
                     <input type="radio" name="ActorDirectorRadios" id="aRadio1" value="actor" checked>
                     Actor
                 </label>
             </div>
-            <div class="radio col-sm-2">
+            <div class="radio col-sm-3 text-left">
                 <label>
                     <input type="radio" name="ActorDirectorRadios" id="aRadio2" value="director">
                     Director
@@ -65,23 +65,23 @@
         </div>
 
         <div class="form-group">
-            <label class="col-sm-2" for="firstName">First Name</label>
-            <input class ="col-sm-8" type="text" class="form-control" id="firstName" placeholder="Enter First Name..." required>
+            <label class="col-sm-3 text-right" for="firstName">First Name</label>
+            <input class ="col-sm-8" type="text" class="form-control" id="firstName" placeholder="Enter First Name..." name="first" >
         </div>
         <div class="form-group">
-            <label class = "col-sm-2" for="lastName">Last Name</label>
-            <input class = "col-sm-8" type="text" class="form-control" id="lastName" placeholder="Enter Last Name..." required>
+            <label class = "col-sm-3 text-right" for="lastName">Last Name</label>
+            <input class = "col-sm-8" type="text" class="form-control" id="lastName" placeholder="Enter Last Name..." name="last" >
         </div>
 
         <div class="form-group">
-            <label class="col-sm-2">Gender</label>
-            <div class="radio col-sm-2">
+            <label class="col-sm-3 text-right">Gender</label>
+            <div class="radio col-sm-1 text-right">
                 <label>
                     <input type="radio" name="genderRadios" id="gRadio1" value="Male" checked>
                     Male
                 </label>
             </div>
-            <div class="radio col-sm-2">
+            <div class="radio col-sm-2 text-left">
                 <label>
                     <input type="radio" name="genderRadios" id="gRadio2" value="Female">
                     Female
@@ -90,28 +90,63 @@
         </div>
 
         <div class="form-group">
-            <label class = "col-sm-2" for="dob">Date of Birth</label>
-            <input class = "col-sm-8" type="text" class="form-control" id="dob" placeholder="Enter Date of Birth..." required>
+            <label class = "col-sm-3 text-right" for="dob">Date of Birth (YYYY-MM-DD)</label>
+            <input class = "col-sm-8" type="text" class="form-control" id="dob" placeholder="Enter Date of Birth..." name="dob" >
         </div>
         <div class="form-group">
-            <label class = "col-sm-2" for="dod">Date of Death</label>
-            <input class = "col-sm-8" type="text" class="form-control" id="dod" placeholder="Enter Date of Death...">
+            <label class = "col-sm-3 text-right" for="dod">Date of Death (YYYY-MM-DD) </label>
+            <input class = "col-sm-8" type="text" class="form-control" id="dod" placeholder="Enter Date of Death..." name ="dod">
         </div>
 
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" name="submit" class="btn btn-success">Submit</button>
 
     </form>
 
-</div><!-- /.container -->
-
+</div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-3.1.1.min.js"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/angular.min.js"></script>
+
+<script>
+    function InsertActorDirector(){
+        var first = document.getElementById('first').value;
+        var last = document.getElementById('last').value;
+        var dob = document.getElementById('dob').value;
+        var dod = document.getElementById('dod').value;
+
+        if(document.getElementById('gRadio1').checked){
+            var gender = document.getElementById('gRadio1').value;
+        }
+        else if(document.getElementById('gRadio2').checked){
+            var gender = document.getElementById('gRadio2').value;
+        }
+
+        if(document.getElementById('aRadio1').checked){
+            var type = document.getElementById('aRadio1').value;
+        }
+        else if(document.getElementById('aRadio2').checked){
+            var type = document.getElementById('aRadio2').value;
+        }
+
+
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                document.getElementById('response').innerHTML = this.responseText;
+            }
+        }
+        request.open("GET","handler/AddActorDirectorHandler.php?ActorDirectorRadios="+type+"&first="+first+"&last="+last+"&genderRadios="+gender+"&dob="+dob+"&dod="+dod);
+        request.send();
+    }
+
+    }
+</script>
+<?php include ("handler/AddActorDirectorHandler.php"); ?>
+
 
 </body>
 </html>

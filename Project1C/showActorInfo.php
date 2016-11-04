@@ -62,28 +62,32 @@ function QueryActor(){
         exit();
     }
     else{
-        printf('<table border=1 cellspacing=1 cellpadding=1><tr>');
-
-        printf('<td><b>Name</b></td>');
-        printf('<td><b>Movie</b></td>');
-
-        #print headers in bold
-        while ($info = $result->fetch_field()) {#loop header
-            printf('<td><b>' . $info->name . '</b></td>');
+        while($r = $result->fetch_assoc()){
+            $rows[] = $r;
         }
-        printf('</tr><tr>');
-
-        #print data in bolds
-        while ($row = $result->fetch_row()) {#loop data
-            for ($x = 0; $x < $result->field_count; $x++) {
-                $row[$x] == NULL ? printf('<td>N/A</td>') : printf('<td>' . $row[$x] . '</td>');
-            }
-            printf('</td><tr>');
-        }
-        printf('</tr></table>');
-
-        #close connection.
-        $mysqli->close();
+        print json_encode($rows);
+//        printf('<table border=1 cellspacing=1 cellpadding=1><tr>');
+//
+//        printf('<td><b>Name</b></td>');
+//        printf('<td><b>Movie</b></td>');
+//
+//        #print headers in bold
+//        while ($info = $result->fetch_field()) {#loop header
+//            printf('<td><b>' . $info->name . '</b></td>');
+//        }
+//        printf('</tr><tr>');
+//
+//        #print data in bolds
+//        while ($row = $result->fetch_row()) {#loop data
+//            for ($x = 0; $x < $result->field_count; $x++) {
+//                $row[$x] == NULL ? printf('<td>N/A</td>') : printf('<td>' . $row[$x] . '</td>');
+//            }
+//            printf('</td><tr>');
+//        }
+//        printf('</tr></table>');
+//
+//        #close connection.
+//        $mysqli->close();
     }
 }
 
