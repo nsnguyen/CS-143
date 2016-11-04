@@ -51,7 +51,6 @@ class DataRequest
         }
     }
 
-
     public function InsertActorDirector($type,$first,$last,$gender,$dob,$dod){
 
 
@@ -111,7 +110,7 @@ class DataRequest
         $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
 
         if($mysqli->connect_errno){
-            printf($mysqli->connect_error);
+            return($mysqli->connect_error);
             exit();
         }
 
@@ -119,31 +118,7 @@ class DataRequest
         $result = $mysqli->query("SELECT * FROM Movie;");
 
         if(!$result){
-            printf($mysqli->error);
-            exit();
-        }
-        else{
-            while($r = $result->fetch_assoc()){
-                $rows[] = $r;
-            }
-            $mysqli->close();
-            return json_encode($rows);
-        }
-
-    }
-
-    public function SearchMovie($searchTitle){
-        $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
-
-        if($mysqli->connect_errno){
-            printf($mysqli->connect_error);
-            exit();
-        }
-
-        $result = $mysqli->query("SELECT * FROM Movie WHERE title LIKE '%$searchTitle%'");
-
-        if(!$result){
-            printf($mysqli->error);
+            return($mysqli->error);
             exit();
         }
         else{
@@ -160,13 +135,13 @@ class DataRequest
 
         $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
         if($mysqli->connect_errno){
-            printf($mysqli->connect_error);
+            return($mysqli->connect_error);
             exit();
         }
 
         $result = $mysqli->query("SELECT * FROM Actor;");
         if(!$result){
-            printf($mysqli->error);
+            return($mysqli->error);
             exit();
         }
         else{
@@ -177,6 +152,55 @@ class DataRequest
             return json_encode($rows);
         }
     }
+
+    public function SearchMovie($searchTitle){
+        $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
+
+        if($mysqli->connect_errno){
+            return($mysqli->connect_error);
+            exit();
+        }
+
+        $result = $mysqli->query("SELECT * FROM Movie WHERE title LIKE '%$searchTitle%' ORDER BY year DESC");
+
+        if(!$result){
+            return($mysqli->error);
+            exit();
+        }
+        else{
+            while($r = $result->fetch_assoc()){
+                $rows[] = $r;
+            }
+            $mysqli->close();
+            return json_encode($rows);
+        }
+
+    }
+
+    public function SearchName($searchFirst, $searchLast){
+        $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
+
+        if($mysqli->connect_errno){
+            return($mysqli->connect_error);
+            exit();
+        }
+
+        $result = $mysqli->query("SELECT * FROM Actor WHERE (first LIKE '%$searchFirst%' AND last LIKE '%$searchLast%') OR (first like '%$searchLast%' AND last like '%$searchFirst%')");
+
+        if(!$result){
+            return ($mysqli->error);
+            exit();
+        }
+        else{
+            while($r = $result->fetch_assoc()){
+                $rows[] = $r;
+            }
+            $mysqli->close();
+            return json_encode($rows);
+        }
+
+    }
+
 
 
 }
