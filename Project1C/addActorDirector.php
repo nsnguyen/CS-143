@@ -100,6 +100,8 @@
 
         <button type="submit" name="submit" class="btn btn-success">Submit</button>
 
+        <div class="col-sm-12 text-center" id="response"></div>
+
     </form>
 
 </div>
@@ -109,7 +111,6 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/angular.min.js"></script>
 
 <script>
     function InsertActorDirector(){
@@ -141,6 +142,7 @@
         }
         request.open("GET","handler/AddActorDirectorHandler.php?ActorDirectorRadios="+type+"&first="+first+"&last="+last+"&genderRadios="+gender+"&dob="+dob+"&dod="+dod);
         request.send();
+
     }
 
     }

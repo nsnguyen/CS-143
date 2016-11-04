@@ -64,43 +64,43 @@
             <label class="col-sm-3 text-right">MPAA Rating</label>
             <div class="radio col-xs-1">
                 <label>
-                    <input type="radio" name="ratingRadios" id="rRadio1" value="G" checked>
+                    <input type="radio" name="rating" id="rRadio1" value="G" checked>
                     G
                 </label>
             </div>
             <div class="radio col-xs-1">
                 <label>
-                    <input type="radio" name="ratingRadios" id="rRadio2" value="PG">
+                    <input type="radio" name="rating" id="rRadio2" value="PG">
                     PG
                 </label>
             </div>
             <div class="radio col-xs-1">
                 <label>
-                    <input type="radio" name="ratingRadios" id="rRadio3" value="PG-13">
+                    <input type="radio" name="rating" id="rRadio3" value="PG-13">
                     PG-13
                 </label>
             </div>
             <div class="radio col-xs-1">
                 <label>
-                    <input type="radio" name="ratingRadios" id="rRadio4" value="NC-17">
+                    <input type="radio" name="rating" id="rRadio4" value="NC-17">
                     NC-17
                 </label>
             </div>
             <div class="radio col-xs-1">
                 <label>
-                    <input type="radio" name="ratingRadios" id="rRadio5" value="R">
+                    <input type="radio" name="rating" id="rRadio5" value="R">
                     R
                 </label>
             </div>
             <div class="radio col-xs-1">
                 <label>
-                    <input type="radio" name="ratingRadios" id="rRadio6" value="surrendere">
+                    <input type="radio" name="rating" id="rRadio6" value="surrendere">
                     surrendere
                 </label>
             </div>
             <div class="radio col-xs-1">
                 <label>
-                    <input type="radio" name="ratingRadios" id="rRadio7" value="others">
+                    <input type="radio" name="rating" id="rRadio7" value="others">
                     others
                 </label>
             </div>
@@ -132,10 +132,13 @@
             </select>
         </div>
 
+        <div class="form-group">
+            <div class="col-sm-3"></div>
+            <button type="button" id = "submit" class="btn btn-success col-sm-2" name="submit">Submit</button>
+        </div>
 
-        <button type="submit" id = "submit" class="btn btn-success" name="submit" onclick="InsertMovie()">Submit</button>
 
-        <div id="response"></div>
+        <div class="col-sm-12 text-center" id="response"></div>
 
     </form>
 
@@ -143,54 +146,78 @@
 
 
 <script src="js/jquery-3.1.1.min.js"></script>
-<!--<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
 <script src="js/bootstrap.min.js"></script>
-<script src="js/angular.min.js"></script>
 
-<script>
-    function InsertMovie(){
-        var title = document.getElementById('title').value;
-        var year = document.getElementById('year').value;
-        var company = document.getElementById('company').value;
+<script type="text/javascript">
+    (function() {
+        var httpRequest;
 
-        if(document.getElementById('rRadio1').checked){
-            var rating = document.getElementById('rRadio1').value;
-        }
-        else if(document.getElementById('rRadio2').checked){
-            var rating = document.getElementById('rRadio2').value;
-        }
-        else if(document.getElementById('rRadio3').checked){
-            var rating = document.getElementById('rRadio3').value;
-        }
-        else if(document.getElementById('rRadio4').checked){
-            var rating = document.getElementById('rRadio4').value;
-        }
-        else if(document.getElementById('rRadio5').checked){
-            var rating = document.getElementById('rRadio5').value;
-        }
-        else if(document.getElementById('rRadio6').checked){
-            var rating = document.getElementById('rRadio6').value;
-        }
-        else if(document.getElementById('rRadio7').checked){
-            var rating = document.getElementById('rRadio7').value;
-        }
+
 
         var genre = document.getElementById('genre').value;
 
+        document.getElementById("submit").onclick = function() { InsertMovie(); };
 
-        var request = new XMLHttpRequest();
-        request.onreadystatechange = function(){
-            if(this.readyState == 4 && this.status == 200){
-                document.getElementById('response').innerHTML = this.responseText;
+
+        function InsertMovie(){
+
+            var title = document.getElementById('title').value;
+            var year = document.getElementById('year').value;
+            var company = document.getElementById('company').value;
+            var rating;
+            if(document.getElementById('rRadio1').checked){
+                rating = document.getElementById('rRadio1').value;
+            }
+            else if(document.getElementById('rRadio2').checked){
+                rating = document.getElementById('rRadio2').value;
+            }
+            else if(document.getElementById('rRadio3').checked){
+                rating = document.getElementById('rRadio3').value;
+            }
+            else if(document.getElementById('rRadio4').checked){
+                rating = document.getElementById('rRadio4').value;
+            }
+            else if(document.getElementById('rRadio5').checked) {
+                rating = document.getElementById('rRadio5').value;
+            }
+            else if(document.getElementById('rRadio6').checked){
+                rating = document.getElementById('rRadio6').value;
+            }
+            else if(document.getElementById('rRadio7').checked){
+                rating = document.getElementById('rRadio7').value;
+            }
+
+
+            httpRequest = new XMLHttpRequest();
+
+            if (!httpRequest) {
+                alert('Giving up :( Cannot create an XMLHTTP instance');
+                return false;
+            }
+
+            httpRequest.onreadystatechange = alertContents;
+            httpRequest.open('GET', 'handler/AddMovieHandler.php?title='+title+'&year='+year+'&company='+company+'&rating='+rating+'&genre='+genre);
+            httpRequest.send();
+
+        }
+
+
+        function alertContents() {
+            if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                if (httpRequest.status === 200) {
+                    alert(httpRequest.responseText);
+                } else {
+                    alert('There was a problem with the request.');
+                }
             }
         }
-        request.open("GET","handler/AddMovieHandler.php?title="+title+"&year="+year+"&company="+company+"&ratingRadios="+rating+"&genre="+genre);
-        request.send();
-    }
+    })();
+
+
 
 </script>
-<?php include ("handler/AddMovieHandler.php"); ?>
-
+<?php include ("handler/AddMovieHandler.php");
+?>
 
 </body>
 </html>
