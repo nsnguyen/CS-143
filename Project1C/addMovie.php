@@ -152,10 +152,7 @@
     (function() {
         var httpRequest;
 
-
-
         document.getElementById("submit").onclick = function() { InsertMovie(); };
-
 
         function InsertMovie(){
 
@@ -195,11 +192,10 @@
             }
 
             httpRequest.onreadystatechange = alertContents;
-            httpRequest.open('GET', 'handler/AddMovieHandler.php?title='+title+'&year='+year+'&company='+company+'&rating='+rating+'&genre='+genre);
+            httpRequest.open('GET', 'handler/AddMovieHandler.php?title='+encodeURI(title)+'&year='+encodeURI(year)+'&company='+encodeURI(company)+'&rating='+encodeURI(rating)+'&genre='+encodeURI(genre),true);
             httpRequest.send();
 
         }
-
 
         function alertContents() {
             if (httpRequest.readyState === XMLHttpRequest.DONE) {

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CS143 Movie Database</title>
+    <title>Add Actor or Director</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -152,12 +152,10 @@
             }
 
             httpRequest.onreadystatechange = alertContents;
-            httpRequest.open('GET', 'handler/AddActorDirectorHandler.php?ActorDirectorRadios='+type+'&first='+first+'&last='+last+'&genderRadios='+gender+'&dob='+dob+'&dod='+dod);
+            httpRequest.open('GET', 'handler/AddActorDirectorHandler.php?ActorDirectorRadios='+encodeURI(type)+'&first='+encodeURI(first)+'&last='+encodeURI(last)+'&genderRadios='+encodeURI(gender)+'&dob='+encodeURI(dob)+'&dod='+encodeURI(dod),true);
             httpRequest.send();
 
-
         }
-
 
         function alertContents() {
             if (httpRequest.readyState === XMLHttpRequest.DONE) {
@@ -173,10 +171,7 @@
 
 
 
-
 </script>
-
-
 
 </body>
 </html>
