@@ -1,9 +1,9 @@
 <?php
 require 'DataRequest.php';
 
-$searchTitle = trim($_REQUEST['searchTitle']);
+$searchName = trim($_REQUEST['searchName']);
 
-$strExplodes = explode(" ",$searchTitle);
+$strExplodes = explode(" ",$searchName);
 
 $searchString = "";
 
@@ -12,9 +12,8 @@ foreach($strExplodes as $val){
 }
 
 
+
 if($searchString !== ""){
     $dataRequest = new DataRequest();
-    echo $dataRequest->SearchMovie($searchString);
+    echo $dataRequest->SearchDirector($searchString); // pass in array
 }
-
-?>

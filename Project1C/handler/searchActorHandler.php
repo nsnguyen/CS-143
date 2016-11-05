@@ -1,9 +1,19 @@
 <?php
 require 'DataRequest.php';
 
-$searchName = trim($_REQUEST['searchTitle']);
+$searchName = trim($_REQUEST['searchName']);
 
-if($searchTitle !== ""){
+$strExplodes = explode(" ",$searchName);
+
+$searchString = "";
+
+foreach($strExplodes as $val){
+    $searchString .= $val;
+}
+
+
+
+if($searchString !== ""){
     $dataRequest = new DataRequest();
-    echo $dataRequest->SearchMovie($searchTitle);
+    echo $dataRequest->SearchActor($searchString); // pass in array
 }

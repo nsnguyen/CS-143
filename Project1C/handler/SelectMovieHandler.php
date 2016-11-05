@@ -2,7 +2,7 @@
 require 'DataRequest.php';
 
 $dataRequest = new DataRequest();
-echo $dataRequest->SelectMovie();
+echo $dataRequest->SelectTop20LatestMovieAdded();
 
 
 ?>

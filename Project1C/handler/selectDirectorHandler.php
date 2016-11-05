@@ -2,7 +2,7 @@
 require 'DataRequest.php';
 
 $dataRequest = new DataRequest();
-echo $dataRequest->SelectTop20LatestActorAdded();
+echo $dataRequest->SelectTop20LatestDirectorAdded();
 
 
 ?>

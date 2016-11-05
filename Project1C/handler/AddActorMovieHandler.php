@@ -1,9 +1,21 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Nguyen
- * Date: 11/3/2016
- * Time: 11:10 PM
- */
+require 'DataRequest.php';
+
+$aid = $_REQUEST['actors'];
+$mid = $_REQUEST['movies'];
+$role = $_REQUEST['role'];
+
+
+if($mid !== "" && $aid !== "" && $role !== ""){
+
+    $dataRequest = new DataRequest();
+    echo $dataRequest->InsertActorMovie($mid,$aid,$role);
+
+}
+else{
+    echo "Select an actor, a movie, and the role they played in.";
+}
+
+
 
 ?>
