@@ -36,7 +36,7 @@
                 <li><a href="addComment.php">Add Comment</a></li>
                 <li><a href="addActorMovie.php">Add Actor/Movie Relation</a></li>
                 <li><a href="addDirectorMovie.php">Add Director/Movie Relation</a></li>
-                <li><a href="search.php">Search</a></li>
+                <li><a href="Search.php">Search</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

@@ -36,9 +36,9 @@
                 <li><a href="addComment.php">Add Comment</a></li>
                 <li><a href="addActorMovie.php">Add Actor/Movie Relation</a></li>
                 <li><a href="addDirectorMovie.php">Add Director/Movie Relation</a></li>
-                <li><a href="search.php">Search</a></li>
+                <li><a href="Search.php">Search</a></li>
             </ul>
-        </div><!--/.nav-collapse -->
+        </div>
     </div>
 </nav>
 
@@ -55,7 +55,7 @@
 
         <div class="form-group">
             <label class="col-sm-12" for="searchName">Search Director (only display latest 50 records. Use search function to filter)</label>
-            <input type="text" class="col-sm-3 form-control" id = "searchName" value ="" name="searchName" placeholder="Enter the name of an actor you want to search here...">
+            <input type="text" class="col-sm-3 form-control" id = "searchName" value ="" name="searchName" placeholder="Enter the name of an Director you want to search here...">
         </div>
 
         <div class="form-group">

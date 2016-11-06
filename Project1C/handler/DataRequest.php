@@ -197,6 +197,60 @@ class DataRequest
 
     }
 
+    public function SearchMovieById($mid){
+        $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
+
+        if($mysqli->connect_errno){
+            return($mysqli->connect_error);
+        }
+
+        $result = $mysqli->query("SELECT M.title, M.year, M.rating, M.company
+                                        ,D.first directorfirst, D.last directorlast
+                                        ,G.genre
+                                        ,A.first actorfirst, A.last actorlast
+                                        ,MA.role,MA.aid
+                                  FROM Movie M
+                                  LEFT JOIN MovieDirector MD ON M.id=MD.mid
+                                  LEFT JOIN Director D ON MD.did=D.id
+                                  LEFT JOIN MovieGenre G ON M.id=G.mid
+                                  LEFT JOIN MovieActor MA ON M.id=MA.mid
+                                  LEFT JOIN Actor A ON MA.aid=A.id
+                                  WHERE M.id=$mid;");
+
+//        $result = $mysqli->query("SELECT M.title, M.year, M.rating, M.company
+//                                    ,A.first actorfirst, A.last actorlast, A.sex, A.dob actordob, A.dod actordod
+//                                    ,D.first directorfirst, D.last directorlast, D.dob directordob, D.dod directordod
+//                                    ,G.genre
+//                                    ,R.name, R.time, R.rating, R.comment
+//                                    FROM Movie M
+//                                    LEFT JOIN MovieGenre G
+//                                    ON M.id=G.mid
+//                                    LEFT JOIN MovieDirector MD
+//                                    ON M.id=MD.mid
+//                                    LEFT JOIN Director D
+//                                    ON MD.did=D.id
+//                                    LEFT JOIN MovieActor MA
+//                                    ON M.id=MA.mid
+//                                    LEFT JOIN Actor A
+//                                    ON MA.aid=A.id
+//                                    LEFT JOIN Review R
+//                                    ON M.id=R.mid
+//                                    WHERE M.id = $mid;");
+
+        if(!$result){
+            return ($mysqli->error);
+        }
+        else{
+            while($r = $result->fetch_assoc()){
+                $rows[] = $r;
+            }
+            $mysqli->close();
+            return json_encode($rows);
+        }
+    }
+
+
+
     public function SearchActor($searchName){
 
         $nameStrip = str_replace(array('.', ',','\'','-'), '' , $searchName);
@@ -230,6 +284,36 @@ class DataRequest
         }
 
     }
+
+
+    public function SearchActorById($aid){
+        $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
+
+        if($mysqli->connect_errno){
+            return($mysqli->connect_error);
+        }
+
+        $result = $mysqli->query("SELECT A.id,A.last,A.first,A.sex,A.dod,A.dob
+                                        ,MA.mid,MA.aid,MA.role
+                                        ,M.title,M.year,M.rating,M.company
+                                  FROM Actor A 
+                                  LEFT JOIN MovieActor MA ON A.id=MA.aid 
+                                  LEFT JOIN Movie M ON MA.mid=M.id 
+                                  WHERE A.id=$aid");
+
+        if(!$result){
+            return ($mysqli->error);
+        }
+        else{
+            while($r = $result->fetch_assoc()){
+                $rows[] = $r;
+            }
+            $mysqli->close();
+            return json_encode($rows);
+        }
+
+    }
+
 
     public function SearchDirector($searchName){
         $nameStrip = str_replace(array('.', ',','\'','-'), '' , $searchName);
@@ -343,6 +427,60 @@ class DataRequest
                 return($mysqli->error);
             }
         }
+    }
+
+
+    public function SearchReviewByMovieId($mid){
+
+        $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
+
+        if($mysqli->connect_errno){
+            return($mysqli->connect_error);
+        }
+
+        $result = $mysqli->query("SELECT * 
+                                  FROM Review R1 LEFT JOIN
+                                  (SELECT mid, AVG(rating) averagerating FROM Review GROUP BY mid) R2
+                                  ON R1.mid = R2.mid
+                                  WHERE R1.mid=$mid");
+
+        if(!$result){
+            return ($mysqli->error);
+        }
+        else{
+            while($r = $result->fetch_assoc()){
+                $rows[] = $r;
+            }
+            $mysqli->close();
+            return json_encode($rows);
+        }
+    }
+
+    public function InsertReviewByMovieId($mid,$name,$rating,$comment){
+
+        if(!is_numeric($rating)){
+            return "Year is not numeric.";
+        }
+        elseif($rating > 5 || $rating <0){
+            return "Rating should be between 0 and 5.";
+        }
+
+        $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
+
+        if($mysqli->connect_errno){
+            return($mysqli->connect_error);
+        }
+
+        $result = $mysqli->query("INSERT INTO Review(name,time,mid,rating,comment) VALUES('$name',NOW(),$mid,$rating,'$comment');");
+
+        if(!$result){
+            return ($mysqli->error);
+        }
+        else{
+            $mysqli->close();
+            return "A Review is added sucessfully";
+        }
+
     }
 
 
