@@ -204,18 +204,61 @@ class DataRequest
             return($mysqli->connect_error);
         }
 
-        $result = $mysqli->query("SELECT M.title, M.year, M.rating, M.company
-                                        ,D.first directorfirst, D.last directorlast
-                                        ,G.genre
-                                        ,A.first actorfirst, A.last actorlast
-                                        ,MA.role,MA.aid
-                                  FROM Movie M
-                                  LEFT JOIN MovieDirector MD ON M.id=MD.mid
-                                  LEFT JOIN Director D ON MD.did=D.id
-                                  LEFT JOIN MovieGenre G ON M.id=G.mid
-                                  LEFT JOIN MovieActor MA ON M.id=MA.mid
-                                  LEFT JOIN Actor A ON MA.aid=A.id
-                                  WHERE M.id=$mid;");
+        $result = $mysqli->query("SELECT M.title,M.year,M.rating,M.company,D.director
+                                          ,G.genre,A.first actorfirst,A.last actorlast,MA.role,MA.aid
+                                            FROM Movie M
+                                            LEFT JOIN (SELECT mid, GROUP_CONCAT(' ',DD.first, ' ', DD.last) director
+                                                        FROM MovieDirector MD
+                                                        LEFT JOIN Director DD ON MD.did=DD.id
+                                                        WHERE MD.mid=$mid GROUP BY mid) D ON M.id=D.mid
+                                            LEFT JOIN (SELECT mid, GROUP_CONCAT(' ',genre) genre FROM MovieGenre Where mid=$mid GROUP BY mid) G ON M.id=G.mid
+                                            LEFT JOIN MovieActor MA ON M.id=MA.mid
+                                            LEFT JOIN Actor A ON MA.aid=A.id 
+                                            WHERE M.id=$mid
+                                              ;");
+
+
+//        SELECT M.title, M.year, M.rating, M.company
+//                                          D.director, G.genre, A.first, A.last, MA.role,MA.aid
+//                                  FROM Movie M
+//                                  LEFT JOIN (SELECT mid, GROUP_CONCAT(DD.first, ' ', DD.last, ' ') director
+//                                              FROM MovieDirector MD
+//                                              LEFT JOIN Director DD ON MD.did=DD.id
+//                                              WHERE MD.mid=$mid GROUP BY mid) D ON M.id=D.mid
+//                                  LEFT JOIN (SELECT mid, GROUP_CONCAT(GG.genre, ' ') genre FROM MovieGenre GG) G ON M.id=G.mid
+//                                  LEFT JOIN MovieActor MA ON M.id=MA.mid
+//                                  LEFT JOIN Actor A ON MA.aid=A.id
+//                                  WHERE M.id=$mid
+
+
+//
+//        SELECT M.title, M.year, M.rating, M.company
+//                                                ,GROUP_CONCAT(D.first, ' ',D.last,' ') director
+//                                                ,GROUP_CONCAT(' ',G.genre) genre
+//                                                ,A.first actorfirst, A.last actorlast
+//                                                ,MA.role,MA.aid
+//                                          FROM Movie M
+//                                          LEFT JOIN MovieDirector MD ON M.id=MD.mid
+//                                          LEFT JOIN Director D ON MD.did=D.id
+//                                          LEFT JOIN MovieGenre G ON M.id=G.mid
+//                                          LEFT JOIN MovieActor MA ON M.id=MA.mid
+//                                          LEFT JOIN Actor A ON MA.aid=A.id
+//                                          WHERE M.id=$mid
+//                                          GROUP BY M.title,M.year,M.rating,M.company,A.first,A.last,MA.role,MA.aid;
+
+//
+//        $result = $mysqli->query("SELECT M.title, M.year, M.rating, M.company
+//                                        ,D.first directorfirst, D.last directorlast
+//                                        ,G.genre
+//                                        ,A.first actorfirst, A.last actorlast
+//                                        ,MA.role,MA.aid
+//                                  FROM Movie M
+//                                  LEFT JOIN MovieDirector MD ON M.id=MD.mid
+//                                  LEFT JOIN Director D ON MD.did=D.id
+//                                  LEFT JOIN MovieGenre G ON M.id=G.mid
+//                                  LEFT JOIN MovieActor MA ON M.id=MA.mid
+//                                  LEFT JOIN Actor A ON MA.aid=A.id
+//                                  WHERE M.id=$mid;");
 
 //        $result = $mysqli->query("SELECT M.title, M.year, M.rating, M.company
 //                                    ,A.first actorfirst, A.last actorlast, A.sex, A.dob actordob, A.dod actordod

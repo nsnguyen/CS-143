@@ -30,7 +30,6 @@
                 <li class="active"><a href="index.php">Home</a></li>
                 <li><a href="addActorDirector.php">Add Actor/Director</a></li>
                 <li><a href="addMovie.php">Add Movie</a></li>
-                <li><a href="addComment.php">Add Comment</a></li>
                 <li><a href="addActorMovie.php">Add Actor/Movie Relation</a></li>
                 <li><a href="addDirectorMovie.php">Add Director/Movie Relation</a></li>
                 <li><a href="Search.php">Search</a></li>
@@ -212,6 +211,8 @@
             rowCounter: 0,
             actorsString: "",
             reviewsString:"",
+            directorsString: "",
+            genresString:"",
             averageRating:0
         }
 
@@ -254,7 +255,7 @@
                     document.getElementById('year').innerHTML = response.obj[0].year;
                     document.getElementById('rating').innerHTML = response.obj[0].rating;
                     document.getElementById('company').innerHTML = response.obj[0].company;
-                    document.getElementById('director').innerHTML = response.obj[0].directorfirst + ' ' + response.obj[0].directorlast;
+                    document.getElementById('director').innerHTML = response.obj[0].director;
                     document.getElementById('genre').innerHTML = response.obj[0].genre;
                     document.getElementById('actors').innerHTML = response.actorsString;
 

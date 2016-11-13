@@ -30,7 +30,6 @@
                 <li class="active"><a href="index.php">Home</a></li>
                 <li><a href="addActorDirector.php">Add Actor/Director</a></li>
                 <li><a href="addMovie.php">Add Movie</a></li>
-                <li><a href="addComment.php">Add Comment</a></li>
                 <li><a href="addActorMovie.php">Add Actor/Movie Relation</a></li>
                 <li><a href="addDirectorMovie.php">Add Director/Movie Relation</a></li>
                 <li><a href="Search.php">Search</a></li>
