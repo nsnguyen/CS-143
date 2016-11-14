@@ -148,7 +148,7 @@
                         if(response.actorsObj !== null){
                             for(var i=0; i<response.actorsObj.length;i++){
                                 response.actorRowCounter += 1;
-                                response.actorsString += '<tbody><tr><th scope="row">'+response.actorRowCounter+'</th><td><a href="showActorInfo.php?aid='+ response.actorsObj[i].id +'">'+response.actorsObj[i].first + ' ' +response.actorsObj[i].last +' ('+ response.actorsObj[i].dob + ')</td></tr>'
+                                response.actorsString += '<tbody><tr><th scope="row">'+response.actorRowCounter+'</th><td><a href="showActorInfo.php?aid='+ response.actorsObj[i].id+'">'+response.actorsObj[i].first + ' ' +response.actorsObj[i].last +' ('+ response.actorsObj[i].dob + ')</td></tr>'
                             }
                         }
                     } else{

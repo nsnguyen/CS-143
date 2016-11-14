@@ -28,12 +28,12 @@
     <favorites_list name="vm-shared" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="DataRequest.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Project1C/handler/DataRequest.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="DataRequest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project1C/www/handler/DataRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="372" column="50" selection-start-line="372" selection-start-column="50" selection-end-line="372" selection-end-column="50" />
+            <state relative-caret-position="210">
+              <caret line="126" column="79" selection-start-line="126" selection-start-column="71" selection-end-line="126" selection-end-column="79" />
               <folding>
                 <element signature="n#SearchActorById#0;n#DataRequest#0;n#!!top" expanded="false" />
                 <marker date="1479085005440" expanded="true" signature="695:738" ph="SELECT * FRO... Movie" />
@@ -94,31 +94,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addActorMovie.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project1C/addActorMovie.php">
+      <file leaf-file-name="addActorDirector.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project1C/www/addActorDirector.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="206" column="22" selection-start-line="206" selection-start-column="22" selection-end-line="206" selection-end-column="22" />
+            <state relative-caret-position="-17">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchActorHandler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project1C/handler/searchActorHandler.php">
+      <file leaf-file-name="addDirectorMovie.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project1C/www/addDirectorMovie.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="493">
+              <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchDirectorHandler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project1C/handler/searchDirectorHandler.php">
+      <file leaf-file-name="addMovie.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Project1C/www/addMovie.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            <state relative-caret-position="-340">
+              <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -139,12 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/calculator.php" />
-        <option value="$PROJECT_DIR$/team.txt" />
-        <option value="$PROJECT_DIR$/Project1A/readme.txt" />
-        <option value="$PROJECT_DIR$/Project1A/calculator.php" />
-        <option value="$PROJECT_DIR$/Project1B/load.sql" />
-        <option value="$PROJECT_DIR$/Project1B/queries.sql" />
         <option value="$PROJECT_DIR$/Project1B/readme.txt" />
         <option value="$PROJECT_DIR$/Project1B/team.txt" />
         <option value="$PROJECT_DIR$/Project1B/violate.sql" />
@@ -175,7 +169,6 @@
         <option value="$PROJECT_DIR$/Project1C/handler/searchMovieByIdHandler.php" />
         <option value="$PROJECT_DIR$/Project1C/handler/searchReviewHandler.php" />
         <option value="$PROJECT_DIR$/Project1C/handler/AddMovieReviewHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/addActorDirector.php" />
         <option value="$PROJECT_DIR$/Project1C/addComment.php" />
         <option value="$PROJECT_DIR$/Project1C/addDirectorMovie.php" />
         <option value="$PROJECT_DIR$/Project1C/index.php" />
@@ -188,6 +181,15 @@
         <option value="$PROJECT_DIR$/Project1C/handler/searchDirectorHandler.php" />
         <option value="$PROJECT_DIR$/Project1C/handler/DataRequest.php" />
         <option value="$PROJECT_DIR$/Project1C/addActorMovie.php" />
+        <option value="$PROJECT_DIR$/Project1C/addActorDirector.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/addActorDirector.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/Search.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/index.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/addMovie.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/showActorInfo.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/showMovieInfo.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/addActorMovie.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/addDirectorMovie.php" />
       </list>
     </option>
   </component>
@@ -199,10 +201,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="248" />
-    <option name="y" value="198" />
-    <option name="width" value="1751" />
-    <option name="height" value="1132" />
+    <option name="x" value="1499" />
+    <option name="y" value="251" />
+    <option name="width" value="1707" />
+    <option name="height" value="824" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -235,6 +237,46 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="vm-shared" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vm-shared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vm-shared" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project1C" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vm-shared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vm-shared" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project1C" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handler" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -286,10 +328,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\vm-shared\Project1C\testcase" />
+      <recent name="C:\vm-shared\Project1C\www" />
       <recent name="C:\vm-shared\Project1C\handler" />
       <recent name="C:\vm-shared\Project1C\model" />
       <recent name="$PROJECT_DIR$/Project1C/js" />
-      <recent name="$PROJECT_DIR$/Project1C" />
     </key>
   </component>
   <component name="RunManager">
@@ -374,17 +416,19 @@
       <workItem from="1478595055394" duration="1642000" />
       <workItem from="1479000550186" duration="5311000" />
       <workItem from="1479074840138" duration="10132000" />
+      <workItem from="1479088978659" duration="738000" />
+      <workItem from="1479102615715" duration="4004000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194231000" />
+    <option name="totallyTimeSpent" value="198973000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="248" y="198" width="1751" height="1132" extended-state="0" />
-    <editor active="true" />
+    <frame x="1499" y="251" width="1707" height="824" extended-state="1" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1740634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21643998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -492,7 +536,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/js/bootstrap.js">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-31732">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -500,7 +544,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project1C/js/angular.min.js" />
-    <entry file="file://$PROJECT_DIR$/Project1C/css/MyTemplate.css">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/css/MyTemplate.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
@@ -539,7 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
           <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -550,35 +593,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/addActorDirector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="61" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/addComment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="34" column="61" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="61" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project1C/sql/create.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -586,11 +604,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/searchMovieByIdHandler.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchMovieByIdHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
@@ -598,7 +615,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/searchMovieHandler.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchMovieHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
@@ -606,7 +623,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/searchReviewHandler.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchReviewHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
@@ -614,7 +631,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/selectActorHandler.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/selectActorHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
@@ -622,7 +639,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/selectDirectorHandler.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/selectDirectorHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
@@ -630,7 +647,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/selectMovieHandler.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/selectMovieHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
@@ -638,7 +655,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/AddMovieReviewHandler.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddMovieReviewHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
@@ -646,7 +663,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/AddDirectorMovieHandler.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddDirectorMovieHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
@@ -654,7 +671,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/AddActorMovieHandler.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddActorMovieHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
@@ -664,7 +681,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/AddActorDirectorHandler.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddActorDirectorHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
@@ -672,7 +689,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/searchActorByIdHandler.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchActorByIdHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
@@ -680,39 +697,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/addMovie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="283" column="0" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/showActorInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1374">
-          <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/showMovieInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1004">
-          <caret line="301" column="73" selection-start-line="301" selection-start-column="73" selection-end-line="301" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/Search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-707">
-          <caret line="123" column="25" selection-start-line="123" selection-start-column="20" selection-end-line="123" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/AddMovieHandler.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddMovieHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
@@ -720,31 +705,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/addDirectorMovie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="187" column="67" selection-start-line="187" selection-start-column="46" selection-end-line="187" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/addActorMovie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="206" column="22" selection-start-line="206" selection-start-column="22" selection-end-line="206" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/searchActorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/searchDirectorHandler.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchDirectorHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
@@ -752,10 +713,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/DataRequest.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchActorHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="372" column="50" selection-start-line="372" selection-start-column="50" selection-end-line="372" selection-end-column="50" />
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/addComment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="47" column="70" selection-start-line="47" selection-start-column="70" selection-end-line="47" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/showMovieInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="222" column="26" selection-start-line="222" selection-start-column="26" selection-end-line="222" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/showActorInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="151" column="52" selection-start-line="151" selection-start-column="52" selection-end-line="151" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/Search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="186" column="31" selection-start-line="186" selection-start-column="31" selection-end-line="186" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/addActorMovie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="71" column="55" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/DataRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="126" column="79" selection-start-line="126" selection-start-column="71" selection-end-line="126" selection-end-column="79" />
           <folding>
             <element signature="n#SearchActorById#0;n#DataRequest#0;n#!!top" expanded="false" />
             <marker date="1479085005440" expanded="true" signature="695:738" ph="SELECT * FRO... Movie" />
@@ -812,6 +829,30 @@
             <marker date="1479085005440" expanded="true" signature="16719:16781" ph="SELECT mid, Review" />
             <marker date="1479085005440" expanded="true" signature="17637:17731" ph="INSERT INTO Review... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/addActorDirector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/addDirectorMovie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/addMovie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="44" column="50" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>

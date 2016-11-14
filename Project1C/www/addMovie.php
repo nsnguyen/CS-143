@@ -42,7 +42,7 @@
 <div class="container">
     <div class="starter">
         <h1>This is where you can add a new Movie.</h1>
-        <h4>Add Title, Year, Rating, Genre and Company.</h4>
+        <h4>Please add Title, Year, Rating, Genre (you can add more than one genre), and Company.</h4>
     </div>
     <form class="form-horizontal" >
         <div class="form-group">

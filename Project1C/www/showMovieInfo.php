@@ -195,7 +195,8 @@
 
         window.onload = onload;
 
-        document.getElementById('submit').onclick = function(){ InsertMovieReviews();};
+        //document.getElementById('submit').onclick = function(){ InsertMovieReviews(); };
+        document.getElementById('submit').onclick = function(){ InsertMovieReviews(); };
 
 
         var request = {
@@ -338,6 +339,7 @@
                     if (httpRequest.status === 200) {
                         //alert(httpRequest.responseText);
                         document.getElementById('response').innerHTML = httpRequest.responseText;
+                        GetMovieReviews();
                     } else {
                         alert('There was a problem with the request.');
                     }
@@ -348,7 +350,7 @@
             httpRequest.open('GET', 'handler/AddMovieReviewHandler.php?mid='+encodeURI(request.mid)+'&name='+encodeURI(request.reviewer)+'&rating='+encodeURI(request.rating)+'&comment='+encodeURI(request.comment),true);
             httpRequest.send();
 
-            GetMovieReviews();
+            //GetMovieReviews();
         }
 
 

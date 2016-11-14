@@ -44,7 +44,8 @@
     <div class="starter">
         <h1>This is where you can add Actor and Movie Relation.</h1>
         <h4>Ex: You can search for 'Tom Hanks' or 'Hanks Tom'. It will return Tom Hanks in List of Actors.</h4>
-        <h4>Also, You can search for names with ', - .Ex: Json Chu Cheng, J'son Chu-Cheng will return J'son Chu-Cheng.</h4>
+        <h4>Also, You can search for names with ' , - /  . </h4>
+        <h4>Ex: Json Chu Cheng, J'son Chu-Cheng will return J'son Chu-Cheng.</h4>
 
     </div>
 
@@ -62,13 +63,13 @@
 
 
         <div class="form-group">
-            <label for="actors">List of Actors</label>
+            <label for="actors">List of Actors (top 50)</label>
             <select multiple class="form-control" id="actors" name="actors">
             </select>
         </div>
 
         <div class="form-group">
-            <label for="movies">List of Movies</label>
+            <label for="movies">List of Movies (top 50)</label>
             <select multiple class="form-control" id="movies" name="movies">
             </select>
         </div>

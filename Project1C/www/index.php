@@ -45,7 +45,7 @@
 
     <div class="starter">
         <h1>This is a database project for CS143</h1>
-        <p class="lead">This website is built using Bootstrap and AngularJS.<br> I hope you enjoy this website.</p>
+        <p class="lead">This website is built using Bootstrap and AJAX.<br> I hope you enjoy this website.</p>
     </div>
 
 </div><!-- /.container -->
