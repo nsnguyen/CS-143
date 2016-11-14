@@ -11,7 +11,7 @@ class DataRequest
         return "Test";
     }
 
-    public function InsertMovie($title,$year,$company,$rating,$genre){
+    public function InsertMovie($title,$year,$company,$rating,$genresArry){
         if(!is_numeric($year)){
             return "Year is not numeric.";
         }
@@ -42,17 +42,26 @@ class DataRequest
         }
 
         $sqlMovie = "INSERT INTO Movie(id,title,year,rating,company) VALUES($newId,'$titleE',$year,'$rating','$companyE');";
-        $sqlMovieGenre = "INSERT INTO MovieGenre(mid,genre) VALUES($newId,'$genre');";
         $sqlUpdateMaxId = "UPDATE MaxMovieID SET id=$newId WHERE id=$maxId[0];";
 
-
-        if($mysqli->query($sqlMovie)=== TRUE && $mysqli->query($sqlMovieGenre)===TRUE && $mysqli->query($sqlUpdateMaxId)===TRUE){
-            $mysqli->close();
-            return "New Movie and Genre record added succesfully. New Max Id is recorded.";
+        if($mysqli->query($sqlMovie)=== TRUE && $mysqli->query($sqlUpdateMaxId)===TRUE){
         }
         else{
             return($mysqli->error);
         }
+
+        for($x = 0; $x <count($genresArry); $x++){
+            $sqlMovieGenre = "INSERT INTO MovieGenre(mid,genre) VALUES($newId,'$genresArry[$x]');";
+            if($mysqli->query($sqlMovieGenre)===TRUE){
+            }
+            else{
+                return($mysqli->error);
+            }
+        }
+
+
+        $mysqli->close();
+        return "New Movie and Genre record added succesfully. New Max Id is recorded.";
     }
 
     public function InsertActorDirector($type,$first,$last,$gender,$dob,$dod){
@@ -218,68 +227,6 @@ class DataRequest
                                               ;");
 
 
-//        SELECT M.title, M.year, M.rating, M.company
-//                                          D.director, G.genre, A.first, A.last, MA.role,MA.aid
-//                                  FROM Movie M
-//                                  LEFT JOIN (SELECT mid, GROUP_CONCAT(DD.first, ' ', DD.last, ' ') director
-//                                              FROM MovieDirector MD
-//                                              LEFT JOIN Director DD ON MD.did=DD.id
-//                                              WHERE MD.mid=$mid GROUP BY mid) D ON M.id=D.mid
-//                                  LEFT JOIN (SELECT mid, GROUP_CONCAT(GG.genre, ' ') genre FROM MovieGenre GG) G ON M.id=G.mid
-//                                  LEFT JOIN MovieActor MA ON M.id=MA.mid
-//                                  LEFT JOIN Actor A ON MA.aid=A.id
-//                                  WHERE M.id=$mid
-
-
-//
-//        SELECT M.title, M.year, M.rating, M.company
-//                                                ,GROUP_CONCAT(D.first, ' ',D.last,' ') director
-//                                                ,GROUP_CONCAT(' ',G.genre) genre
-//                                                ,A.first actorfirst, A.last actorlast
-//                                                ,MA.role,MA.aid
-//                                          FROM Movie M
-//                                          LEFT JOIN MovieDirector MD ON M.id=MD.mid
-//                                          LEFT JOIN Director D ON MD.did=D.id
-//                                          LEFT JOIN MovieGenre G ON M.id=G.mid
-//                                          LEFT JOIN MovieActor MA ON M.id=MA.mid
-//                                          LEFT JOIN Actor A ON MA.aid=A.id
-//                                          WHERE M.id=$mid
-//                                          GROUP BY M.title,M.year,M.rating,M.company,A.first,A.last,MA.role,MA.aid;
-
-//
-//        $result = $mysqli->query("SELECT M.title, M.year, M.rating, M.company
-//                                        ,D.first directorfirst, D.last directorlast
-//                                        ,G.genre
-//                                        ,A.first actorfirst, A.last actorlast
-//                                        ,MA.role,MA.aid
-//                                  FROM Movie M
-//                                  LEFT JOIN MovieDirector MD ON M.id=MD.mid
-//                                  LEFT JOIN Director D ON MD.did=D.id
-//                                  LEFT JOIN MovieGenre G ON M.id=G.mid
-//                                  LEFT JOIN MovieActor MA ON M.id=MA.mid
-//                                  LEFT JOIN Actor A ON MA.aid=A.id
-//                                  WHERE M.id=$mid;");
-
-//        $result = $mysqli->query("SELECT M.title, M.year, M.rating, M.company
-//                                    ,A.first actorfirst, A.last actorlast, A.sex, A.dob actordob, A.dod actordod
-//                                    ,D.first directorfirst, D.last directorlast, D.dob directordob, D.dod directordod
-//                                    ,G.genre
-//                                    ,R.name, R.time, R.rating, R.comment
-//                                    FROM Movie M
-//                                    LEFT JOIN MovieGenre G
-//                                    ON M.id=G.mid
-//                                    LEFT JOIN MovieDirector MD
-//                                    ON M.id=MD.mid
-//                                    LEFT JOIN Director D
-//                                    ON MD.did=D.id
-//                                    LEFT JOIN MovieActor MA
-//                                    ON M.id=MA.mid
-//                                    LEFT JOIN Actor A
-//                                    ON MA.aid=A.id
-//                                    LEFT JOIN Review R
-//                                    ON M.id=R.mid
-//                                    WHERE M.id = $mid;");
-
         if(!$result){
             return ($mysqli->error);
         }
@@ -294,9 +241,16 @@ class DataRequest
 
 
 
-    public function SearchActor($searchName){
+    public function SearchActor($searchNameArry){
 
-        $nameStrip = str_replace(array('.', ',','\'','-'), '' , $searchName);
+        foreach ($searchNameArry as &$value) {
+            $value = "'%".str_replace(array('.', ',','\'','-'), '' , $value)."%'";
+        }
+        unset($value);
+
+
+
+        //$nameStrip = str_replace(array('.', ',','\'','-'), '' , $searchName);
 
 
         $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
@@ -306,14 +260,36 @@ class DataRequest
 
         }
 
+        $firstSearch = "first LIKE ";
+        $lastSearch = "last LIKE ";
+
+
+        $firstSearch .= join(" OR first LIKE ",$searchNameArry);
+        $lastSearch .= join(" OR last LIKE ", $searchNameArry);
+
+
+        if(count($searchNameArry)>1){
+            $result = $mysqli->query("SELECT * FROM Actor WHERE("
+                .$firstSearch.") AND (".$lastSearch.")");
+        }
+        else{
+            $result = $mysqli->query("SELECT * FROM Actor WHERE("
+                .$firstSearch.") OR (".$lastSearch.")");
+        }
+
+//        return "SELECT * FROM Actor WHERE("
+//        .$firstSearch.") AND (".$lastSearch.")";
+
         //HACKY code.. so the rotation of the string FirstName+LastName to LastName+FirstName is just appending them together..
         // So this string will always return the person regardless of FirstName or LastName
         //Ex: Tom Hanks, Hanks Tom - will return Tom Hanks because it exists in TomHanksTomHanks
 
        // REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'-',''),'.',''),'\,',''),'\'','')
 
-        $result = $mysqli->query("SELECT * FROM Actor WHERE CONCAT(REPLACE(CONCAT(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'-',''),'.',''),'\,',''),'\'',''),REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(last,'\'',''),'-',''),'.',''),'\,',''),'\'','')),' ',''),
-                                  REPLACE(CONCAT(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'-',''),'.',''),'\,',''),'\'',''),REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(last,'\'',''),'-',''),'.',''),'\,',''),'\'','')),' ','')) LIKE '%$nameStrip%' ORDER BY dob DESC");
+        //$result = $mysqli->query("SELECT * FROM Actor WHERE CONCAT(REPLACE(CONCAT(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'-',''),'.',''),'\,',''),'\'',''),REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(last,'\'',''),'-',''),'.',''),'\,',''),'\'','')),' ',''),
+        //                          REPLACE(CONCAT(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'-',''),'.',''),'\,',''),'\'',''),REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(last,'\'',''),'-',''),'.',''),'\,',''),'\'','')),' ','')) LIKE '%$nameStrip%' ORDER BY dob DESC");
+
+
 
         if(!$result){
             return ($mysqli->error);
@@ -358,8 +334,15 @@ class DataRequest
     }
 
 
-    public function SearchDirector($searchName){
-        $nameStrip = str_replace(array('.', ',','\'','-'), '' , $searchName);
+    public function SearchDirector($searchNameArry){
+
+        foreach ($searchNameArry as &$value) {
+            $value = "'%".str_replace(array('.', ',','\'','-'), '' , $value)."%'";
+        }
+        unset($value);
+
+
+        //$nameStrip = str_replace(array('.', ',','\'','-'), '' , $searchName);
 
 
         $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
@@ -369,14 +352,35 @@ class DataRequest
 
         }
 
+        $firstSearch = "first LIKE ";
+        $lastSearch = "last LIKE ";
+
+
+        $firstSearch .= join(" OR first LIKE ",$searchNameArry);
+        $lastSearch .= join(" OR last LIKE ", $searchNameArry);
+
+
+        if(count($searchNameArry)>1){
+            $result = $mysqli->query("SELECT * FROM Director WHERE("
+                .$firstSearch.") AND (".$lastSearch.")");
+        }
+        else{
+            $result = $mysqli->query("SELECT * FROM Director WHERE("
+                .$firstSearch.") OR (".$lastSearch.")");
+        }
+
+//        return "SELECT * FROM Director WHERE("
+//        .$firstSearch.") AND (".$lastSearch.")";
+
+
         //HACKY code.. so the rotation of the string FirstName+LastName to LastName+FirstName is just appending them together..
         // So this string will always return the person regardless of FirstName or LastName
         //Ex: Tom Hanks, Hanks Tom - will return Tom Hanks because it exists in TomHanksTomHanks
 
         // REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'-',''),'.',''),'\,',''),'\'','')
 
-        $result = $mysqli->query("SELECT * FROM Director WHERE CONCAT(REPLACE(CONCAT(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'-',''),'.',''),'\,',''),'\'',''),REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(last,'\'',''),'-',''),'.',''),'\,',''),'\'','')),' ',''),
-                                  REPLACE(CONCAT(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'-',''),'.',''),'\,',''),'\'',''),REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(last,'\'',''),'-',''),'.',''),'\,',''),'\'','')),' ','')) LIKE '%$nameStrip%' ORDER BY dob DESC");
+//        $result = $mysqli->query("SELECT * FROM Director WHERE CONCAT(REPLACE(CONCAT(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'-',''),'.',''),'\,',''),'\'',''),REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(last,'\'',''),'-',''),'.',''),'\,',''),'\'','')),' ',''),
+//                                  REPLACE(CONCAT(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'-',''),'.',''),'\,',''),'\'',''),REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(last,'\'',''),'-',''),'.',''),'\,',''),'\'','')),' ','')) LIKE '%$nameStrip%' ORDER BY dob DESC");
 
         if(!$result){
             return ($mysqli->error);

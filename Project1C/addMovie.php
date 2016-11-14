@@ -106,30 +106,59 @@
         </div>
 
         <div class="form-group">
-            <label class="col-sm-3 text-right" for="rating">Genre</label>
-            <select id="genre" name="genre" class="col-sm-8">
-                <option value="Drama">Drama</option>
-                <option value="Comedy">Comedy</option>
-                <option value="Romance">Romance</option>
-                <option value="Crime">Crime</option>
-                <option value="Horror">Horror</option>
-                <option value="Mystery">Mystery</option>
-                <option value="Thriller">Thriller</option>
-                <option value="Action">Action</option>
-                <option value="Adventure">Adventure</option>
-                <option value="Fantasy">Fantasy</option>
-                <option value="Documentary">Documentary</option>
-                <option value="Family">Family</option>
-                <option value="Sci-Fi">Sci-Fi</option>
-                <option value="Animation">Animation</option>
-                <option value="Musical">Musical</option>
-                <option value="War">War</option>
-                <option value="Western">Western</option>
-                <option value="Adult">Adult</option>
-                <option value="Short">Short</option>
-                <option value="Others">Others</option>
-            </select>
+<!--            <label class="col-sm-3 text-right" for="rating">Genre</label>-->
+<!--            <select id="genre" name="genre" class="col-sm-8">-->
+<!--                <option value="Drama">Drama</option>-->
+<!--                <option value="Comedy">Comedy</option>-->
+<!--                <option value="Romance">Romance</option>-->
+<!--                <option value="Crime">Crime</option>-->
+<!--                <option value="Horror">Horror</option>-->
+<!--                <option value="Mystery">Mystery</option>-->
+<!--                <option value="Thriller">Thriller</option>-->
+<!--                <option value="Action">Action</option>-->
+<!--                <option value="Adventure">Adventure</option>-->
+<!--                <option value="Fantasy">Fantasy</option>-->
+<!--                <option value="Documentary">Documentary</option>-->
+<!--                <option value="Family">Family</option>-->
+<!--                <option value="Sci-Fi">Sci-Fi</option>-->
+<!--                <option value="Animation">Animation</option>-->
+<!--                <option value="Musical">Musical</option>-->
+<!--                <option value="War">War</option>-->
+<!--                <option value="Western">Western</option>-->
+<!--                <option value="Adult">Adult</option>-->
+<!--                <option value="Short">Short</option>-->
+<!--                <option value="Others">Others</option>-->
+<!--            </select>-->
+
+            <div class="form-group">
+                <label class="col-sm-3 text-right" for="genre">Genre</label>
+                <input type="checkbox" name="genre" id="Drama" value="Drama">  Drama
+                <input type="checkbox" name="genre" id="Comedy" value="Comedy">  Comedy
+                <input type="checkbox" name="genre" id="Romance" value="Romance">  Romance
+                <input type="checkbox" name="genre" id="Horror" value="Horror">  Horror
+                <input type="checkbox" name="genre" id="Mystery" value="Mystery">  Mystery
+                <input type="checkbox" name="genre" id="Thriller" value="Thriller">  Thriller
+                <input type="checkbox" name="genre" id="Action" value="Action">  Action
+                <input type="checkbox" name="genre" id="Adventure" value="Adventure">  Adventure
+                <input type="checkbox" name="genre" id="Fantasy" value="Fantasy">  Fantasy
+                <input type="checkbox" name="genre" id="Documentary" value="Documentary">  Documentary
+                <input type="checkbox" name="genre" id="Family" value="Family">  Family
+                <input type="checkbox" name="genre" id="Sci-Fi" value="Sci-Fi">  Sci-Fi
+                <input type="checkbox" name="genre" id="Animation" value="Animation">  Animation
+                <input type="checkbox" name="genre" id="Musical" value="Musical">  Musical
+                <input type="checkbox" name="genre" id="War" value="War">  War
+                <input type="checkbox" name="genre" id="Western" value="Western">  Western
+                <input type="checkbox" name="genre" id="Adult" value="Adult">  Adult
+                <input type="checkbox" name="genre" id="Short" value="Short">  Short
+                <input type="checkbox" name="genre" id="Others" value="Others">  Others
+
+
+            </div>
+
         </div>
+
+
+
 
         <div class="form-group">
             <div class="col-sm-3"></div>
@@ -167,6 +196,7 @@
             request.year = document.getElementById('year').value;
             request.company = document.getElementById('company').value;
 
+
             if(document.getElementById('rRadio1').checked){
                 request.rating = document.getElementById('rRadio1').value;
             }
@@ -188,8 +218,69 @@
             else if(document.getElementById('rRadio7').checked){
                 request.rating = document.getElementById('rRadio7').value;
             }
-            request.genre = document.getElementById('genre').value;
 
+
+            var genres = [];
+
+            if(document.getElementById('Drama').checked === true){
+                genres.push(document.getElementById('Drama').value);
+            }
+            if(document.getElementById('Comedy').checked === true){
+                genres.push(document.getElementById('Comedy').value);
+            }
+            if(document.getElementById('Romance').checked === true){
+                genres.push(document.getElementById('Romance').value);
+            }
+            if(document.getElementById('Horror').checked === true) {
+                genres.push(document.getElementById('Horror').value);
+            }
+            if(document.getElementById('Mystery').checked === true){
+                genres.push(document.getElementById('Mystery').value);
+            }
+            if(document.getElementById('Thriller').checked === true){
+                genres.push(document.getElementById('Thriller').value);
+            }
+            if(document.getElementById('Action').checked === true){
+                genres.push(document.getElementById('Action').value);
+            }
+            if(document.getElementById('Adventure').checked === true){
+                genres.push(document.getElementById('Adventure').value);
+            }
+            if(document.getElementById('Fantasy').checked === true){
+                genres.push(document.getElementById('Fantasy').value);
+            }
+            if(document.getElementById('Documentary').checked === true){
+                genres.push(document.getElementById('Documentary').value);
+            }
+            if(document.getElementById('Family').checked === true){
+                genres.push(document.getElementById('Family').value);
+            }
+            if(document.getElementById('Sci-Fi').checked === true){
+                genres.push(document.getElementById('Sci-Fi').value);
+            }
+            if(document.getElementById('Animation').checked === true){
+                genres.push(document.getElementById('Animation').value);
+            }
+            if(document.getElementById('Musical').checked === true){
+                genres.push(document.getElementById('Musical').value);
+            }
+            if(document.getElementById('War').checked === true){
+                genres.push(document.getElementById('War').value);
+            }
+            if(document.getElementById('Western').checked === true){
+                genres.push(document.getElementById('Western').value);
+            }
+            if(document.getElementById('Adult').checked === true){
+                genres.push(document.getElementById('Adult').value);
+            }
+            if(document.getElementById('Short').checked === true){
+                genres.push(document.getElementById('Short').value);
+            }
+            if(document.getElementById('Others').checked === true){
+                genres.push(document.getElementById('Others').value);
+            }
+
+            request.genre= genres.join(",");
 
             httpRequest = new XMLHttpRequest();
 
