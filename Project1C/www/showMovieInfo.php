@@ -8,12 +8,9 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/MyTemplate.css" rel="stylesheet">
-
-
 </head>
 
 <body>
-
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -85,7 +82,6 @@
             <h4 id="director"></h4>
         </div>
     </div>
-
 
     <div class="row">
         <div class="col-sm-2">
@@ -176,15 +172,9 @@
     </div>
 
     <div class="col-sm-12 text-center" id ="button"><button type="button" id = "submit" class="btn btn-primary" name="submit">Submit Review</button></div>
-
 </div>
 
-
-
 <div value = "" class="col-sm-12 text-center" id="response"></div>
-
-
-
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -195,9 +185,7 @@
 
         window.onload = onload;
 
-        //document.getElementById('submit').onclick = function(){ InsertMovieReviews(); };
         document.getElementById('submit').onclick = function(){ InsertMovieReviews(); };
-
 
         var request = {
             mid: "",
@@ -240,7 +228,6 @@
                 response.rowCounter = 0;
                 if(httpRequest.readyState === XMLHttpRequest.DONE){
                     if(httpRequest.status === 200){
-                        //alert(httpRequest.responseText);
                         response.obj = JSON.parse(httpRequest.responseText);
                         if(response.obj !== null){
                             for(var i = 0; i<response.obj.length;i++){
@@ -285,7 +272,6 @@
                 response.rowCounter = 0;
                 if (httpRequest1.readyState === XMLHttpRequest.DONE) {
                     if (httpRequest1.status === 200) {
-                        //alert(httpRequest1.responseText);
                         response.obj = JSON.parse(httpRequest1.responseText);
                         if (response.obj !== null) {
                             response.averageRating = response.obj[0].averagerating;
@@ -340,20 +326,16 @@
             httpRequest.onreadystatechange = function () {
                 if (httpRequest.readyState === XMLHttpRequest.DONE) {
                     if (httpRequest.status === 200) {
-                        //alert(httpRequest.responseText);
                         document.getElementById('response').innerHTML = httpRequest.responseText;
                         GetMovieReviews();
                     } else {
                         alert('There was a problem with the request.');
                     }
-
                 }
             }
 
             httpRequest.open('GET', 'handler/AddMovieReviewHandler.php?mid='+encodeURI(request.mid)+'&name='+encodeURI(request.reviewer)+'&rating='+encodeURI(request.rating)+'&comment='+encodeURI(request.comment),true);
             httpRequest.send();
-
-            //GetMovieReviews();
         }
 
 
@@ -368,15 +350,9 @@
             }
             return(false);
         }
-
-
-
     })();
 
-
 </script>
-
-
 
 </body>
 </html>

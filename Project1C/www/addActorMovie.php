@@ -205,7 +205,6 @@
             response.obj2 = "";
             if (httpRequest2.readyState === XMLHttpRequest.DONE) {
                 if (httpRequest2.status === 200) {
-                    //alert(httpRequest2.responseText);
                     response.obj2 = JSON.parse(httpRequest2.responseText);
                     if(response.obj2 != null){
                         for(var i = 0; i<response.obj2.length;i++){
@@ -245,7 +244,6 @@
             response.obj = "";
             if (httpRequest.readyState === XMLHttpRequest.DONE) {
                 if (httpRequest.status === 200) {
-                    //alert(httpRequest.responseText);
                     response.obj = JSON.parse(httpRequest.responseText);
                     if(response.obj != null){
                         for(var i = 0; i<response.obj.length;i++){

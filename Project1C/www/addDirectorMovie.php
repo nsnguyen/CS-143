@@ -45,10 +45,6 @@
 
     <div class="starter">
         <h1>This is where you can add Director and Movie Relation.</h1>
-        <h4>Ex: You can search for 'Edward Zwick' or 'Zwick Edward'. It will return Edward Zwick in List of Directors.</h4>
-        <h4>Also, You can search for names with ', - . </h4>
-        <h4>Ex: Json Chu Cheng, J'son Chu-Cheng will return J'son Chu-Cheng.</h4>
-
     </div>
 
     <form class="form-horizontal">
@@ -195,7 +191,6 @@
             response.obj2 = "";
             if (httpRequest2.readyState === XMLHttpRequest.DONE) {
                 if (httpRequest2.status === 200) {
-                    //alert(httpRequest2.responseText);
                     response.obj2 = JSON.parse(httpRequest2.responseText);
                     if(response.obj2 != null){
                         for(var i = 0; i<response.obj2.length;i++){
@@ -235,7 +230,6 @@
             response.obj = "";
             if (httpRequest.readyState === XMLHttpRequest.DONE) {
                 if (httpRequest.status === 200) {
-                    //alert(httpRequest.responseText);
                     response.obj = JSON.parse(httpRequest.responseText);
                     if(response.obj != null){
                         for(var i = 0; i<response.obj.length;i++){

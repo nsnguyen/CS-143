@@ -186,8 +186,6 @@ class DataRequest
             return($mysqli->connect_error);
         }
 
-      //  REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'-',''),'.',''),'\,',''),'\'','')
-
 
         //HACKY code.. so the rotation of the string FirstName+LastName to LastName+FirstName is just appending them together..
         $result = $mysqli->query("SELECT * FROM Movie WHERE CONCAT(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(title,'\'',''),'-',''),'.',''),'\,',''),'\'',''),' ',''),',',''),
@@ -249,10 +247,6 @@ class DataRequest
         unset($value);
 
 
-
-        //$nameStrip = str_replace(array('.', ',','\'','-'), '' , $searchName);
-
-
         $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
 
         if($mysqli->connect_errno){
@@ -260,12 +254,13 @@ class DataRequest
 
         }
 
-        $firstSearch = "first LIKE ";
-        $lastSearch = "last LIKE ";
+        $firstSearch = "REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'\,',''),'-',''),'.','') LIKE ";
+        $lastSearch = "REPLACE(REPLACE(REPLACE(REPLACE(last,'\'',''),'\,',''),'-',''),'.','') LIKE ";
 
 
-        $firstSearch .= join(" OR first LIKE ",$searchNameArry);
-        $lastSearch .= join(" OR last LIKE ", $searchNameArry);
+        $firstSearch .= join(" OR REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'\,',''),'-',''),'.','') LIKE ",$searchNameArry);
+        $lastSearch .= join(" OR REPLACE(REPLACE(REPLACE(REPLACE(last,'\'',''),'\,',''),'-',''),'.','') LIKE ", $searchNameArry);
+
 
 
         if(count($searchNameArry)>1){
@@ -276,9 +271,6 @@ class DataRequest
             $result = $mysqli->query("SELECT * FROM Actor WHERE("
                 .$firstSearch.") OR (".$lastSearch.")");
         }
-
-//        return "SELECT * FROM Actor WHERE("
-//        .$firstSearch.") AND (".$lastSearch.")";
 
         //HACKY code.. so the rotation of the string FirstName+LastName to LastName+FirstName is just appending them together..
         // So this string will always return the person regardless of FirstName or LastName
@@ -341,10 +333,6 @@ class DataRequest
         }
         unset($value);
 
-
-        //$nameStrip = str_replace(array('.', ',','\'','-'), '' , $searchName);
-
-
         $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
 
         if($mysqli->connect_errno){
@@ -352,12 +340,12 @@ class DataRequest
 
         }
 
-        $firstSearch = "first LIKE ";
-        $lastSearch = "last LIKE ";
+        $firstSearch = "REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'\,',''),'-',''),'.','') LIKE ";
+        $lastSearch = "REPLACE(REPLACE(REPLACE(REPLACE(last,'\'',''),'\,',''),'-',''),'.','') LIKE ";
 
 
-        $firstSearch .= join(" OR first LIKE ",$searchNameArry);
-        $lastSearch .= join(" OR last LIKE ", $searchNameArry);
+        $firstSearch .= join(" OR REPLACE(REPLACE(REPLACE(REPLACE(first,'\'',''),'\,',''),'-',''),'.','') LIKE ",$searchNameArry);
+        $lastSearch .= join(" OR REPLACE(REPLACE(REPLACE(REPLACE(last,'\'',''),'\,',''),'-',''),'.','') LIKE ", $searchNameArry);
 
 
         if(count($searchNameArry)>1){
@@ -368,9 +356,6 @@ class DataRequest
             $result = $mysqli->query("SELECT * FROM Director WHERE("
                 .$firstSearch.") OR (".$lastSearch.")");
         }
-
-//        return "SELECT * FROM Director WHERE("
-//        .$firstSearch.") AND (".$lastSearch.")";
 
 
         //HACKY code.. so the rotation of the string FirstName+LastName to LastName+FirstName is just appending them together..
@@ -410,14 +395,7 @@ class DataRequest
         if(!$checkMid){
             return ($mysqli->error);
         }
-//        else{
-//            while($r = $checkMid->fetch_assoc()){
-//                $rows[] = $r;
-//            }
-//            $mysqli->close();
-//            return json_encode($rows);
-//        }
-//    }
+
 
         if($checkMid->num_rows > 0){
             return "Movie and Actor and Role relation is already existed.";
@@ -449,15 +427,6 @@ class DataRequest
         if(!$checkMid){
             return ($mysqli->error);
         }
-//        else{
-//            while($r = $checkMid->fetch_assoc()){
-//                $rows[] = $r;
-//            }
-//            $mysqli->close();
-//            return json_encode($rows);
-//        }
-
-
 
         if($checkMid->num_rows > 0){
             return "Movie and Director relation is already existed.";
@@ -527,9 +496,6 @@ class DataRequest
             $mysqli->close();
             return "A Review is added sucessfully";
         }
-
     }
-
-
 
 }

@@ -9,12 +9,9 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/MyTemplate.css" rel="stylesheet">
-
-
 </head>
 
 <body>
-
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -43,56 +40,31 @@
 
     <div class="starter">
         <h1>This is where you can search and see Actors and Movies basing on your search string.</h1>
-
     </div>
 
     <form class="form-horizontal">
-
         <div class="form-group">
             <label class="col-sm-12" for="searchString">Search</label>
             <input type="text" class="col-sm-3 form-control" id = "searchString" value ="" name="searchString" placeholder="Enter the search string you want to search here...">
         </div>
-
-
         <div class="col-sm-12 text-center">
-
             <button type="button" id = "submit" class="btn btn-primary" name="submit">Search</button>
         </div>
-
-
-
     </form>
 
-
     <div class="row">
-
-
         <div id="printActorName" class="col-sm-6">
             <table id="actorNames" class = "table">
             </table>
-
         </div>
         <div id="printMovieName" class="col-sm-6">
             <table id="movieNames" class = "table">
             </table>
         </div>
-
-
     </div>
 
-
-
 </div>
-
-
-
-    <div value = "" class="col-sm-12 text-center" id="response"></div>
-
-
-
-
-
-
+<div value = "" class="col-sm-12 text-center" id="response"></div>
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

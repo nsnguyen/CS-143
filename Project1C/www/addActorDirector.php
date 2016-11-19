@@ -110,9 +110,6 @@
 
 </div>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
@@ -168,7 +165,6 @@
         function alertContents() {
             if (httpRequest.readyState === XMLHttpRequest.DONE) {
                 if (httpRequest.status === 200) {
-                    //alert(httpRequest.responseText);
                     document.getElementById('response').innerHTML = httpRequest.responseText;
                 } else {
                     alert('There was a problem with the request.');
@@ -176,7 +172,6 @@
             }
         }
     })();
-
 
 
 </script>

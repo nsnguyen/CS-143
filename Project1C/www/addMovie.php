@@ -106,72 +106,34 @@
         </div>
 
         <div class="form-group">
-<!--            <label class="col-sm-3 text-right" for="rating">Genre</label>-->
-<!--            <select id="genre" name="genre" class="col-sm-8">-->
-<!--                <option value="Drama">Drama</option>-->
-<!--                <option value="Comedy">Comedy</option>-->
-<!--                <option value="Romance">Romance</option>-->
-<!--                <option value="Crime">Crime</option>-->
-<!--                <option value="Horror">Horror</option>-->
-<!--                <option value="Mystery">Mystery</option>-->
-<!--                <option value="Thriller">Thriller</option>-->
-<!--                <option value="Action">Action</option>-->
-<!--                <option value="Adventure">Adventure</option>-->
-<!--                <option value="Fantasy">Fantasy</option>-->
-<!--                <option value="Documentary">Documentary</option>-->
-<!--                <option value="Family">Family</option>-->
-<!--                <option value="Sci-Fi">Sci-Fi</option>-->
-<!--                <option value="Animation">Animation</option>-->
-<!--                <option value="Musical">Musical</option>-->
-<!--                <option value="War">War</option>-->
-<!--                <option value="Western">Western</option>-->
-<!--                <option value="Adult">Adult</option>-->
-<!--                <option value="Short">Short</option>-->
-<!--                <option value="Others">Others</option>-->
-<!--            </select>-->
-
-            <div class="form-group">
-                <label class="col-sm-3 text-right" for="genre">Genre</label>
-                <input type="checkbox" name="genre" id="Drama" value="Drama">  Drama
-                <input type="checkbox" name="genre" id="Comedy" value="Comedy">  Comedy
-                <input type="checkbox" name="genre" id="Romance" value="Romance">  Romance
-                <input type="checkbox" name="genre" id="Horror" value="Horror">  Horror
-                <input type="checkbox" name="genre" id="Mystery" value="Mystery">  Mystery
-                <input type="checkbox" name="genre" id="Thriller" value="Thriller">  Thriller
-                <input type="checkbox" name="genre" id="Action" value="Action">  Action
-                <input type="checkbox" name="genre" id="Adventure" value="Adventure">  Adventure
-                <input type="checkbox" name="genre" id="Fantasy" value="Fantasy">  Fantasy
-                <input type="checkbox" name="genre" id="Documentary" value="Documentary">  Documentary
-                <input type="checkbox" name="genre" id="Family" value="Family">  Family
-                <input type="checkbox" name="genre" id="Sci-Fi" value="Sci-Fi">  Sci-Fi
-                <input type="checkbox" name="genre" id="Animation" value="Animation">  Animation
-                <input type="checkbox" name="genre" id="Musical" value="Musical">  Musical
-                <input type="checkbox" name="genre" id="War" value="War">  War
-                <input type="checkbox" name="genre" id="Western" value="Western">  Western
-                <input type="checkbox" name="genre" id="Adult" value="Adult">  Adult
-                <input type="checkbox" name="genre" id="Short" value="Short">  Short
-                <input type="checkbox" name="genre" id="Others" value="Others">  Others
-
-
-            </div>
-
+            <label class="col-sm-3 text-right" for="genre">Genre</label>
+            <input type="checkbox" name="genre" id="Drama" value="Drama">  Drama
+            <input type="checkbox" name="genre" id="Comedy" value="Comedy">  Comedy
+            <input type="checkbox" name="genre" id="Romance" value="Romance">  Romance
+            <input type="checkbox" name="genre" id="Horror" value="Horror">  Horror
+            <input type="checkbox" name="genre" id="Mystery" value="Mystery">  Mystery
+            <input type="checkbox" name="genre" id="Thriller" value="Thriller">  Thriller
+            <input type="checkbox" name="genre" id="Action" value="Action">  Action
+            <input type="checkbox" name="genre" id="Adventure" value="Adventure">  Adventure
+            <input type="checkbox" name="genre" id="Fantasy" value="Fantasy">  Fantasy
+            <input type="checkbox" name="genre" id="Documentary" value="Documentary">  Documentary
+            <input type="checkbox" name="genre" id="Family" value="Family">  Family
+            <input type="checkbox" name="genre" id="Sci-Fi" value="Sci-Fi">  Sci-Fi
+            <input type="checkbox" name="genre" id="Animation" value="Animation">  Animation
+            <input type="checkbox" name="genre" id="Musical" value="Musical">  Musical
+            <input type="checkbox" name="genre" id="War" value="War">  War
+            <input type="checkbox" name="genre" id="Western" value="Western">  Western
+            <input type="checkbox" name="genre" id="Adult" value="Adult">  Adult
+            <input type="checkbox" name="genre" id="Short" value="Short">  Short
+            <input type="checkbox" name="genre" id="Others" value="Others">  Others
         </div>
-
-
-
-
         <div class="form-group">
             <div class="col-sm-3"></div>
             <button type="button" id = "submit" class="btn btn-success col-sm-2" name="submit">Submit</button>
         </div>
-
-
         <div class="col-sm-12 text-center" id="response"></div>
-
     </form>
-
 </div>
-
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -196,7 +158,6 @@
             request.year = document.getElementById('year').value;
             request.company = document.getElementById('company').value;
 
-
             if(document.getElementById('rRadio1').checked){
                 request.rating = document.getElementById('rRadio1').value;
             }
@@ -218,7 +179,6 @@
             else if(document.getElementById('rRadio7').checked){
                 request.rating = document.getElementById('rRadio7').value;
             }
-
 
             var genres = [];
 
@@ -298,7 +258,6 @@
         function alertContents() {
             if (httpRequest.readyState === XMLHttpRequest.DONE) {
                 if (httpRequest.status === 200) {
-                    //alert(httpRequest.responseText);
                     document.getElementById('response').innerHTML = httpRequest.responseText;
                 } else {
                     alert('There was a problem with the request.');
@@ -306,8 +265,6 @@
             }
         }
     })();
-
-
 
 </script>
 

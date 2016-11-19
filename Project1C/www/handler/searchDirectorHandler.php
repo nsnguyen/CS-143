@@ -11,14 +11,3 @@ if(count($strExplodes) >0){
     $dataRequest = new DataRequest();
     echo $dataRequest->SearchDirector($strExplodes); // pass in array
 }
-
-
-//foreach($strExplodes as $val){
-//    $searchString .= $val;
-//}
-//
-//
-//if($searchString !== ""){
-//    $dataRequest = new DataRequest();
-//    echo $dataRequest->SearchDirector($searchString); // pass in array
-//}

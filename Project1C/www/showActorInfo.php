@@ -8,12 +8,9 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/MyTemplate.css" rel="stylesheet">
-
-
 </head>
 
 <body>
-
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -97,15 +94,9 @@
             </table>
         </div>
     </div>
-
 </div>
 
-
-
 <div value = "" class="col-sm-12 text-center" id="response"></div>
-
-
-
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -143,9 +134,7 @@
                 response.rowCounter = 0;
                 if(httpRequest.readyState === XMLHttpRequest.DONE){
                     if(httpRequest.status === 200){
-                        //alert(httpRequest.responseText);
                         response.obj = JSON.parse(httpRequest.responseText);
-                        //alert(response.obj[0].first);
                         if(response.obj !== null){
                             for(var i = 0; i<response.obj.length;i++){
                                 response.rowCounter += 1;
@@ -187,10 +176,7 @@
 
     })();
 
-
 </script>
-
-
 
 </body>
 </html>

@@ -29,21 +29,154 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="showActorInfo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project1C/www/showActorInfo.php">
+      <file leaf-file-name="DataRequest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Project1C/www/handler/DataRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="155" column="25" selection-start-line="155" selection-start-column="25" selection-end-line="155" selection-end-column="25" />
+            <state relative-caret-position="8007">
+              <caret line="497" column="9" selection-start-line="497" selection-start-column="9" selection-end-line="497" selection-end-column="9" />
+              <folding>
+                <element signature="n#SearchActorById#0;n#DataRequest#0;n#!!top" expanded="false" />
+                <marker date="1479594185372" expanded="true" signature="695:738" ph="SELECT * FRO... Movie" />
+                <marker date="1479594185372" expanded="true" signature="695:749" ph="SELECT * FRO... Movie" />
+                <marker date="1479594185372" expanded="true" signature="695:750" ph="SELECT * FRO... Movie" />
+                <marker date="1479594185372" expanded="true" signature="695:755" ph="SELECT * FRO... Movie" />
+                <marker date="1479594185372" expanded="true" signature="993:1043" ph="SELECT id FR... MaxMovieID" />
+                <marker date="1479594185372" expanded="true" signature="1249:1349" ph="INSERT INTO Movie... " />
+                <marker date="1479594185372" expanded="true" signature="1380:1421" ph="UPDATE MaxMo... " />
+                <marker date="1479594185372" expanded="true" signature="1676:1725" ph="INSERT INTO MovieGenre... " />
+                <marker date="1479594185372" expanded="true" signature="1676:1742" ph="INSERT INTO MovieGenre... " />
+                <marker date="1479594185372" expanded="true" signature="2511:2562" ph="SELECT id FR... MaxPersonID" />
+                <marker date="1479594185372" expanded="true" signature="2841:2941" ph="INSERT INTO Actor... " />
+                <marker date="1479594185372" expanded="true" signature="3007:3109" ph="INSERT INTO Actor... " />
+                <marker date="1479594185372" expanded="true" signature="3220:3310" ph="INSERT INTO Director... " />
+                <marker date="1479594185372" expanded="true" signature="3376:3468" ph="INSERT INTO Director... " />
+                <marker date="1479594185372" expanded="true" signature="3527:3570" ph="UPDATE MaxPe... " />
+                <marker date="1479594185372" expanded="true" signature="4159:4204" ph="SELECT * FRO... Movie" />
+                <marker date="1479594185372" expanded="true" signature="4768:4813" ph="SELECT * FRO... Actor" />
+                <marker date="1479594185372" expanded="true" signature="5381:5429" ph="SELECT * FRO... Director" />
+                <marker date="1479594185372" expanded="true" signature="6182:6207" ph="SELECT * FRO... Movie" />
+                <marker date="1479594185372" expanded="true" signature="6182:6534" ph="SELECT * FRO... Movie" />
+                <marker date="1479594185372" expanded="true" signature="7054:7307" ph="SELECT * FRO... Movie" />
+                <marker date="1479594185372" expanded="true" signature="7054:7975" ph="SELECT M.tit... Movie" />
+                <marker date="1479594185372" expanded="true" signature="7054:8032" ph="SELECT M.tit... Movie" />
+                <marker date="1479594185372" expanded="true" signature="7320:7640" ph="SELECT mid, MovieDirector" />
+                <marker date="1479594185372" expanded="true" signature="7713:7771" ph="SELECT mid, MovieGenre" />
+                <marker date="1479594185372" expanded="true" signature="7713:7798" ph="SELECT mid, MovieGenre" />
+                <marker date="1479594185372" expanded="true" signature="9295:9377" ph="SELECT * FRO... Actor" />
+                <marker date="1479594185372" expanded="true" signature="9443:9524" ph="SELECT * FRO... Actor" />
+                <marker date="1479594185372" expanded="true" signature="9993:9999" ph="SELECT * FRO... Actor" />
+                <marker date="1479594185372" expanded="true" signature="9993:10218" ph="SELECT * FRO... Actor" />
+                <marker date="1479594185372" expanded="true" signature="9993:10226" ph="SELECT * FRO... Actor" />
+                <marker date="1479594185372" expanded="true" signature="9993:10485" ph="SELECT * FRO... Actor" />
+                <marker date="1479594185372" expanded="true" signature="9993:10503" ph="SELECT * FRO... Actor" />
+                <marker date="1479594185372" expanded="true" signature="11027:11445" ph="SELECT * FRO... Actor" />
+                <marker date="1479594185372" expanded="true" signature="12660:12745" ph="SELECT * FRO... Director" />
+                <marker date="1479594185372" expanded="true" signature="12811:12895" ph="SELECT * FRO... Director" />
+                <marker date="1479594185372" expanded="true" signature="13366:13879" ph="SELECT * FRO... Director" />
+                <marker date="1479594185372" expanded="true" signature="14417:14441" ph="SELECT * FRO... MovieActor" />
+                <marker date="1479594185372" expanded="true" signature="14417:14453" ph="SELECT * FRO... MovieActor" />
+                <marker date="1479594185372" expanded="true" signature="14417:14454" ph="SELECT * FRO... MovieActor" />
+                <marker date="1479594185372" expanded="true" signature="14417:14466" ph="SELECT * FRO... MovieActor" />
+                <marker date="1479594185372" expanded="true" signature="14417:14497" ph="SELECT * FRO... MovieActor" />
+                <marker date="1479594185372" expanded="true" signature="14748:14802" ph="INSERT INTO MovieActor... " />
+                <marker date="1479594185372" expanded="true" signature="14748:14810" ph="INSERT INTO MovieActor... " />
+                <marker date="1479594185372" expanded="true" signature="15359:15414" ph="SELECT * FRO... MovieActor" />
+                <marker date="1479594185372" expanded="true" signature="15359:15418" ph="SELECT * FRO... MovieActor" />
+                <marker date="1479594185372" expanded="true" signature="15665:15717" ph="INSERT INTO MovieActor... " />
+                <marker date="1479594185372" expanded="true" signature="16268:16275" ph="SELECT A.id,... Actor" />
+                <marker date="1479594185372" expanded="true" signature="16268:16539" ph="SELECT * FRO... Review" />
+                <marker date="1479594185372" expanded="true" signature="16372:16434" ph="SELECT mid, Review" />
+                <marker date="1479594185372" expanded="true" signature="17290:17384" ph="INSERT INTO Review... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addActorDirector.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project1C/www/addActorDirector.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1802">
+              <caret line="166" column="49" selection-start-line="166" selection-start-column="49" selection-end-line="166" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showMovieInfo.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addActorMovie.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project1C/www/addActorMovie.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-782">
+              <caret line="245" column="49" selection-start-line="245" selection-start-column="49" selection-end-line="245" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addDirectorMovie.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project1C/www/addDirectorMovie.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-867">
+              <caret line="231" column="49" selection-start-line="231" selection-start-column="49" selection-end-line="231" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addMovie.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project1C/www/addMovie.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1870">
+              <caret line="128" column="14" selection-start-line="128" selection-start-column="14" selection-end-line="128" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project1C/www/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-82">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Search.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project1C/www/Search.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2374">
+              <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showActorInfo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project1C/www/showActorInfo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showMovieInfo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project1C/www/showMovieInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="240" column="48" selection-start-line="240" selection-start-column="48" selection-end-line="240" selection-end-column="48" />
+            <state relative-caret-position="-3723">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="selectMovieHandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project1C/www/handler/selectMovieHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -64,10 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Project1B/readme.txt" />
-        <option value="$PROJECT_DIR$/Project1B/team.txt" />
-        <option value="$PROJECT_DIR$/Project1B/violate.sql" />
-        <option value="$PROJECT_DIR$/Project1C/ShowActorInfo.php" />
         <option value="$PROJECT_DIR$/Project1C/search.php" />
         <option value="$PROJECT_DIR$/Project1C/css/MyTemplate.css" />
         <option value="$PROJECT_DIR$/Project1C/backend/insertMovie.php" />
@@ -107,12 +236,16 @@
         <option value="$PROJECT_DIR$/Project1C/handler/DataRequest.php" />
         <option value="$PROJECT_DIR$/Project1C/addActorMovie.php" />
         <option value="$PROJECT_DIR$/Project1C/addActorDirector.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/handler/DataRequest.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/handler/searchActorHandler.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/handler/AddMovieHandler.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/handler/searchDirectorHandler.php" />
         <option value="$PROJECT_DIR$/Project1C/www/addActorDirector.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/Search.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/index.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/addMovie.php" />
         <option value="$PROJECT_DIR$/Project1C/www/addActorMovie.php" />
         <option value="$PROJECT_DIR$/Project1C/www/addDirectorMovie.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/addMovie.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/index.php" />
+        <option value="$PROJECT_DIR$/Project1C/www/Search.php" />
         <option value="$PROJECT_DIR$/Project1C/www/showActorInfo.php" />
         <option value="$PROJECT_DIR$/Project1C/www/showMovieInfo.php" />
       </list>
@@ -126,9 +259,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="154" />
-    <option name="y" value="219" />
-    <option name="width" value="2507" />
+    <option name="x" value="286" />
+    <option name="y" value="285" />
+    <option name="width" value="2031" />
     <option name="height" value="948" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -177,8 +310,44 @@
               <option name="myItemId" value="Project1C" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vm-shared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vm-shared" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project1C" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vm-shared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vm-shared" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project1C" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="handler" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,18 +514,18 @@
       <workItem from="1479088978659" duration="738000" />
       <workItem from="1479102615715" duration="5100000" />
       <workItem from="1479522291020" duration="1841000" />
-      <workItem from="1479588216531" duration="1111000" />
+      <workItem from="1479588216531" duration="3614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203021000" />
+    <option name="totallyTimeSpent" value="205524000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="154" y="219" width="2507" height="948" extended-state="0" />
+    <frame x="286" y="285" width="2031" height="948" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14692895" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18163772" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -388,7 +557,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -520,129 +689,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchMovieByIdHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchMovieHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchReviewHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/selectActorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/selectDirectorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/selectMovieHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddMovieReviewHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddDirectorMovieHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddActorMovieHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddActorDirectorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchActorByIdHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddMovieHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchDirectorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchActorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project1C/www/addComment.php" />
-    <entry file="file://$PROJECT_DIR$/Project1C/www/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="47" column="70" selection-start-line="47" selection-start-column="70" selection-end-line="47" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/Search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="186" column="31" selection-start-line="186" selection-start-column="31" selection-end-line="186" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/addActorMovie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="71" column="55" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project1C/testcase/t1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -658,106 +705,242 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/addMovie.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddActorDirectorHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="98" column="18" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
+        <state relative-caret-position="136">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/addDirectorMovie.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddActorMovieHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
+        <state relative-caret-position="187">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <marker date="1478332473586" expanded="true" signature="119:266" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddDirectorMovieHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddMovieHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddMovieReviewHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchActorByIdHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchActorHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchDirectorHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchMovieByIdHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchMovieHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchReviewHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/selectActorHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/selectDirectorHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/selectMovieHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project1C/www/addActorDirector.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="1802">
+          <caret line="166" column="49" selection-start-line="166" selection-start-column="49" selection-end-line="166" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/DataRequest.php">
+    <entry file="file://$PROJECT_DIR$/Project1C/www/addActorMovie.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="126" column="79" selection-start-line="126" selection-start-column="71" selection-end-line="126" selection-end-column="79" />
-          <folding>
-            <element signature="n#SearchActorById#0;n#DataRequest#0;n#!!top" expanded="false" />
-            <marker date="1479085005440" expanded="true" signature="695:738" ph="SELECT * FRO... Movie" />
-            <marker date="1479085005440" expanded="true" signature="695:749" ph="SELECT * FRO... Movie" />
-            <marker date="1479085005440" expanded="true" signature="695:750" ph="SELECT * FRO... Movie" />
-            <marker date="1479085005440" expanded="true" signature="695:755" ph="SELECT * FRO... Movie" />
-            <marker date="1479085005440" expanded="true" signature="993:1043" ph="SELECT id FR... MaxMovieID" />
-            <marker date="1479085005440" expanded="true" signature="1249:1349" ph="INSERT INTO Movie... " />
-            <marker date="1479085005440" expanded="true" signature="1380:1421" ph="UPDATE MaxMo... " />
-            <marker date="1479085005440" expanded="true" signature="1676:1725" ph="INSERT INTO MovieGenre... " />
-            <marker date="1479085005440" expanded="true" signature="1676:1742" ph="INSERT INTO MovieGenre... " />
-            <marker date="1479085005440" expanded="true" signature="2511:2562" ph="SELECT id FR... MaxPersonID" />
-            <marker date="1479085005440" expanded="true" signature="2841:2941" ph="INSERT INTO Actor... " />
-            <marker date="1479085005440" expanded="true" signature="3007:3109" ph="INSERT INTO Actor... " />
-            <marker date="1479085005440" expanded="true" signature="3220:3310" ph="INSERT INTO Director... " />
-            <marker date="1479085005440" expanded="true" signature="3376:3468" ph="INSERT INTO Director... " />
-            <marker date="1479085005440" expanded="true" signature="3527:3570" ph="UPDATE MaxPe... " />
-            <marker date="1479085005440" expanded="true" signature="4159:4204" ph="SELECT * FRO... Movie" />
-            <marker date="1479085005440" expanded="true" signature="4768:4813" ph="SELECT * FRO... Actor" />
-            <marker date="1479085005440" expanded="true" signature="5381:5429" ph="SELECT * FRO... Director" />
-            <marker date="1479085005440" expanded="true" signature="6282:6307" ph="SELECT * FRO... Movie" />
-            <marker date="1479085005440" expanded="true" signature="6282:6634" ph="SELECT * FRO... Movie" />
-            <marker date="1479085005440" expanded="true" signature="7154:7407" ph="SELECT * FRO... Movie" />
-            <marker date="1479085005440" expanded="true" signature="7154:8075" ph="SELECT M.tit... Movie" />
-            <marker date="1479085005440" expanded="true" signature="7154:8132" ph="SELECT M.tit... Movie" />
-            <marker date="1479085005440" expanded="true" signature="7420:7740" ph="SELECT mid, MovieDirector" />
-            <marker date="1479085005440" expanded="true" signature="7813:7871" ph="SELECT mid, MovieGenre" />
-            <marker date="1479085005440" expanded="true" signature="7813:7898" ph="SELECT mid, MovieGenre" />
-            <marker date="1479085005440" expanded="true" signature="9213:9295" ph="SELECT * FRO... Actor" />
-            <marker date="1479085005440" expanded="true" signature="9361:9442" ph="SELECT * FRO... Actor" />
-            <marker date="1479085005440" expanded="true" signature="9475:9551" ph="SELECT * FRO... Actor" />
-            <marker date="1479085005440" expanded="true" signature="10009:10015" ph="SELECT * FRO... Actor" />
-            <marker date="1479085005440" expanded="true" signature="10009:10234" ph="SELECT * FRO... Actor" />
-            <marker date="1479085005440" expanded="true" signature="10009:10242" ph="SELECT * FRO... Actor" />
-            <marker date="1479085005440" expanded="true" signature="10009:10501" ph="SELECT * FRO... Actor" />
-            <marker date="1479085005440" expanded="true" signature="10009:10519" ph="SELECT * FRO... Actor" />
-            <marker date="1479085005440" expanded="true" signature="11043:11461" ph="SELECT * FRO... Actor" />
-            <marker date="1479085005440" expanded="true" signature="12495:12580" ph="SELECT * FRO... Director" />
-            <marker date="1479085005440" expanded="true" signature="12646:12730" ph="SELECT * FRO... Director" />
-            <marker date="1479085005440" expanded="true" signature="12763:12842" ph="SELECT * FRO... Director" />
-            <marker date="1479085005440" expanded="true" signature="13302:13815" ph="SELECT * FRO... Director" />
-            <marker date="1479085005440" expanded="true" signature="14353:14377" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479085005440" expanded="true" signature="14353:14389" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479085005440" expanded="true" signature="14353:14390" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479085005440" expanded="true" signature="14353:14402" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479085005440" expanded="true" signature="14353:14433" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479085005440" expanded="true" signature="14892:14946" ph="INSERT INTO MovieActor... " />
-            <marker date="1479085005440" expanded="true" signature="14892:14954" ph="INSERT INTO MovieActor... " />
-            <marker date="1479085005440" expanded="true" signature="15503:15558" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479085005440" expanded="true" signature="15503:15562" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479085005440" expanded="true" signature="16012:16064" ph="INSERT INTO MovieActor... " />
-            <marker date="1479085005440" expanded="true" signature="16615:16622" ph="SELECT A.id,... Actor" />
-            <marker date="1479085005440" expanded="true" signature="16615:16886" ph="SELECT * FRO... Review" />
-            <marker date="1479085005440" expanded="true" signature="16719:16781" ph="SELECT mid, Review" />
-            <marker date="1479085005440" expanded="true" signature="17637:17731" ph="INSERT INTO Review... " />
-          </folding>
+        <state relative-caret-position="-782">
+          <caret line="245" column="49" selection-start-line="245" selection-start-column="49" selection-end-line="245" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/addDirectorMovie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-867">
+          <caret line="231" column="49" selection-start-line="231" selection-start-column="49" selection-end-line="231" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/addMovie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1870">
+          <caret line="128" column="14" selection-start-line="128" selection-start-column="14" selection-end-line="128" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-82">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/Search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2374">
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project1C/www/showActorInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="155" column="25" selection-start-line="155" selection-start-column="25" selection-end-line="155" selection-end-column="25" />
+        <state relative-caret-position="550">
+          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project1C/www/showMovieInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="240" column="48" selection-start-line="240" selection-start-column="48" selection-end-line="240" selection-end-column="48" />
+        <state relative-caret-position="-3723">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/DataRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8007">
+          <caret line="497" column="9" selection-start-line="497" selection-start-column="9" selection-end-line="497" selection-end-column="9" />
+          <folding>
+            <element signature="n#SearchActorById#0;n#DataRequest#0;n#!!top" expanded="false" />
+            <marker date="1479594185372" expanded="true" signature="695:738" ph="SELECT * FRO... Movie" />
+            <marker date="1479594185372" expanded="true" signature="695:749" ph="SELECT * FRO... Movie" />
+            <marker date="1479594185372" expanded="true" signature="695:750" ph="SELECT * FRO... Movie" />
+            <marker date="1479594185372" expanded="true" signature="695:755" ph="SELECT * FRO... Movie" />
+            <marker date="1479594185372" expanded="true" signature="993:1043" ph="SELECT id FR... MaxMovieID" />
+            <marker date="1479594185372" expanded="true" signature="1249:1349" ph="INSERT INTO Movie... " />
+            <marker date="1479594185372" expanded="true" signature="1380:1421" ph="UPDATE MaxMo... " />
+            <marker date="1479594185372" expanded="true" signature="1676:1725" ph="INSERT INTO MovieGenre... " />
+            <marker date="1479594185372" expanded="true" signature="1676:1742" ph="INSERT INTO MovieGenre... " />
+            <marker date="1479594185372" expanded="true" signature="2511:2562" ph="SELECT id FR... MaxPersonID" />
+            <marker date="1479594185372" expanded="true" signature="2841:2941" ph="INSERT INTO Actor... " />
+            <marker date="1479594185372" expanded="true" signature="3007:3109" ph="INSERT INTO Actor... " />
+            <marker date="1479594185372" expanded="true" signature="3220:3310" ph="INSERT INTO Director... " />
+            <marker date="1479594185372" expanded="true" signature="3376:3468" ph="INSERT INTO Director... " />
+            <marker date="1479594185372" expanded="true" signature="3527:3570" ph="UPDATE MaxPe... " />
+            <marker date="1479594185372" expanded="true" signature="4159:4204" ph="SELECT * FRO... Movie" />
+            <marker date="1479594185372" expanded="true" signature="4768:4813" ph="SELECT * FRO... Actor" />
+            <marker date="1479594185372" expanded="true" signature="5381:5429" ph="SELECT * FRO... Director" />
+            <marker date="1479594185372" expanded="true" signature="6182:6207" ph="SELECT * FRO... Movie" />
+            <marker date="1479594185372" expanded="true" signature="6182:6534" ph="SELECT * FRO... Movie" />
+            <marker date="1479594185372" expanded="true" signature="7054:7307" ph="SELECT * FRO... Movie" />
+            <marker date="1479594185372" expanded="true" signature="7054:7975" ph="SELECT M.tit... Movie" />
+            <marker date="1479594185372" expanded="true" signature="7054:8032" ph="SELECT M.tit... Movie" />
+            <marker date="1479594185372" expanded="true" signature="7320:7640" ph="SELECT mid, MovieDirector" />
+            <marker date="1479594185372" expanded="true" signature="7713:7771" ph="SELECT mid, MovieGenre" />
+            <marker date="1479594185372" expanded="true" signature="7713:7798" ph="SELECT mid, MovieGenre" />
+            <marker date="1479594185372" expanded="true" signature="9295:9377" ph="SELECT * FRO... Actor" />
+            <marker date="1479594185372" expanded="true" signature="9443:9524" ph="SELECT * FRO... Actor" />
+            <marker date="1479594185372" expanded="true" signature="9993:9999" ph="SELECT * FRO... Actor" />
+            <marker date="1479594185372" expanded="true" signature="9993:10218" ph="SELECT * FRO... Actor" />
+            <marker date="1479594185372" expanded="true" signature="9993:10226" ph="SELECT * FRO... Actor" />
+            <marker date="1479594185372" expanded="true" signature="9993:10485" ph="SELECT * FRO... Actor" />
+            <marker date="1479594185372" expanded="true" signature="9993:10503" ph="SELECT * FRO... Actor" />
+            <marker date="1479594185372" expanded="true" signature="11027:11445" ph="SELECT * FRO... Actor" />
+            <marker date="1479594185372" expanded="true" signature="12660:12745" ph="SELECT * FRO... Director" />
+            <marker date="1479594185372" expanded="true" signature="12811:12895" ph="SELECT * FRO... Director" />
+            <marker date="1479594185372" expanded="true" signature="13366:13879" ph="SELECT * FRO... Director" />
+            <marker date="1479594185372" expanded="true" signature="14417:14441" ph="SELECT * FRO... MovieActor" />
+            <marker date="1479594185372" expanded="true" signature="14417:14453" ph="SELECT * FRO... MovieActor" />
+            <marker date="1479594185372" expanded="true" signature="14417:14454" ph="SELECT * FRO... MovieActor" />
+            <marker date="1479594185372" expanded="true" signature="14417:14466" ph="SELECT * FRO... MovieActor" />
+            <marker date="1479594185372" expanded="true" signature="14417:14497" ph="SELECT * FRO... MovieActor" />
+            <marker date="1479594185372" expanded="true" signature="14748:14802" ph="INSERT INTO MovieActor... " />
+            <marker date="1479594185372" expanded="true" signature="14748:14810" ph="INSERT INTO MovieActor... " />
+            <marker date="1479594185372" expanded="true" signature="15359:15414" ph="SELECT * FRO... MovieActor" />
+            <marker date="1479594185372" expanded="true" signature="15359:15418" ph="SELECT * FRO... MovieActor" />
+            <marker date="1479594185372" expanded="true" signature="15665:15717" ph="INSERT INTO MovieActor... " />
+            <marker date="1479594185372" expanded="true" signature="16268:16275" ph="SELECT A.id,... Actor" />
+            <marker date="1479594185372" expanded="true" signature="16268:16539" ph="SELECT * FRO... Review" />
+            <marker date="1479594185372" expanded="true" signature="16372:16434" ph="SELECT mid, Review" />
+            <marker date="1479594185372" expanded="true" signature="17290:17384" ph="INSERT INTO Review... " />
+          </folding>
         </state>
       </provider>
     </entry>

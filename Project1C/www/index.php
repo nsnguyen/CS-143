@@ -7,10 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="css/MyTemplate.css" rel="stylesheet">
 
 </head>
@@ -37,7 +34,7 @@
                 <li><a href="addDirectorMovie.php">Add Director/Movie Relation</a></li>
                 <li><a href="Search.php">Search</a></li>
             </ul>
-        </div><!--/.nav-collapse -->
+        </div>
     </div>
 </nav>
 
@@ -48,12 +45,8 @@
         <p class="lead">This website is built using Bootstrap and AJAX.<br> I hope you enjoy this website.</p>
     </div>
 
-</div><!-- /.container -->
+</div>
 
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
