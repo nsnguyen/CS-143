@@ -245,7 +245,10 @@
                         if(response.obj !== null){
                             for(var i = 0; i<response.obj.length;i++){
                                 response.rowCounter += 1;
-                                response.actorsString += '<tbody><tr><th scope="row">'+response.rowCounter+'</th><td><a href="showActorInfo.php?aid='+response.obj[i].aid+'">'+response.obj[i].actorfirst +' ' + response.obj[i].actorlast+'</td><td>'+response.obj[i].role +'</td></tr></tbody>'
+                                if(response.obj[i].aid != null){
+                                    response.actorsString += '<tbody><tr><th scope="row">'+response.rowCounter+'</th><td><a href="showActorInfo.php?aid='+response.obj[i].aid+'">'+response.obj[i].actorfirst +' ' + response.obj[i].actorlast+'</td><td>'+response.obj[i].role +'</td></tr></tbody>'
+
+                                }
                             }
                         }
                     } else{

@@ -149,7 +149,9 @@
                         if(response.obj !== null){
                             for(var i = 0; i<response.obj.length;i++){
                                 response.rowCounter += 1;
-                                response.moviesString += '<tbody><tr><th scope="row">'+response.rowCounter+'</th><td><a href="showMovieInfo.php?mid='+response.obj[i].mid+'">'+response.obj[i].title +' ('+ response.obj[i].year + ')</td><td>'+response.obj[i].role +'</td></tr></tbody>'
+                                if(response.obj[i].mid != null){
+                                    response.moviesString += '<tbody><tr><th scope="row">'+response.rowCounter+'</th><td><a href="showMovieInfo.php?mid='+response.obj[i].mid+'">'+response.obj[i].title +' ('+ response.obj[i].year + ')</td><td>'+response.obj[i].role +'</td></tr></tbody>'
+                                }
                             }
                         }
                     } else{
