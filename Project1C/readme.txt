@@ -11,7 +11,8 @@ The project consists of 6 main pages.
 	- Add Movie
 	- Add Actor/Movie Relation
 	- Add Director/Movie Relation
-	- Search
+	- Search (search both movie and actor)
+
 
 Home Page:
 This page is the home page, starting point for test case selenium scripts.
@@ -44,4 +45,12 @@ Then, the user can submit which will add the relation of director to the specifi
 Search:
 The search page includes both search Actor handler, and search Movie handler. the search Actor handler will search both first and last name for all permutations.
 Also, the search handler will exclude comma, hyphen, single quotation, and period in the name. The reason is that most people search do not add in those characters in the search string.
-Ho
+However, the user is still allowed to use those listed characters.
+The search Movie handler will search basing on the title. The search title is implemented will also disregard those characters as listed above.
+The implementation of the search title is by rotating the title. For example, if the title is "I love Candy", it will combine all the characters and multiply it by two.
+So the search string will be "IloveCandyIloveCandy". This way, the search criteria will not be as rigid and be more flexible.
+
+Conclusion:
+All frontend is calling AJAX against an event handler. the event handler than calls a a specific function in DataRequest.php class. The function then does it provided task and return a value.
+
+
