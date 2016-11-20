@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9686685-548d-43ff-b7fa-d650c70662e6" name="Default" comment="" />
+    <list default="true" id="cddcc4f4-b169-4af4-b78d-ce11f6ad77dc" name="Default" comment="" />
     <ignored path="vm-shared.iws" />
     <ignored path=".idea/workspace.xml" />
-    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,98 +14,12 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DatabaseView">
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="vm-shared" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="addActorDirector.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/addActorDirector.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-377">
-              <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Project1B/query.php" />
-        <option value="$PROJECT_DIR$/Project1C/backend/InsertData.php" />
-        <option value="$PROJECT_DIR$/Project1B/create.sql" />
-        <option value="$PROJECT_DIR$/Project1C/model/InsertData.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/InsertData.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/AddActorMovieRelation.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/AddActorMovieRelationHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/DataRequestRequest.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/AddActorDirectorHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/searchMovieHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/SelectMovieHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/SelectActorHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/selectDirectorHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/AddActorMovieHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/AddDirectorMovieHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/searchDirectors.php" />
-        <option value="$PROJECT_DIR$/Project1C/searchActors.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/getActorIdHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/searchActorByIdHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/searchMovieByIdHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/searchReviewHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/AddMovieReviewHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/addComment.php" />
-        <option value="$PROJECT_DIR$/Project1C/addDirectorMovie.php" />
-        <option value="$PROJECT_DIR$/Project1C/index.php" />
-        <option value="$PROJECT_DIR$/Project1C/Search.php" />
-        <option value="$PROJECT_DIR$/Project1C/showActorInfo.php" />
-        <option value="$PROJECT_DIR$/Project1C/showMovieInfo.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/AddMovieHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/addMovie.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/searchActorHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/searchDirectorHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/handler/DataRequest.php" />
-        <option value="$PROJECT_DIR$/Project1C/addActorMovie.php" />
-        <option value="$PROJECT_DIR$/Project1C/addActorDirector.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/handler/searchActorHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/handler/AddMovieHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/handler/searchDirectorHandler.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/index.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/handler/DataRequest.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/addActorMovie.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/addActorDirector.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/addDirectorMovie.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/addMovie.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/Search.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/showActorInfo.php" />
-        <option value="$PROJECT_DIR$/Project1C/www/showMovieInfo.php" />
-        <option value="$PROJECT_DIR$/www/handler/DataRequest.php" />
-        <option value="$PROJECT_DIR$/readme.txt" />
-        <option value="$PROJECT_DIR$/www/handler/AddActorDirectorHandler.php" />
-        <option value="$PROJECT_DIR$/www/addActorDirector.php" />
-      </list>
-    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -128,7 +41,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -146,7 +59,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -165,183 +77,53 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vm-shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vm-shared" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vm-shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vm-shared" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="handler" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.pathVariables" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/vm-shared/Project1C/model/InsertData.php" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\vm-shared\Project1C\testcase" />
-      <recent name="C:\vm-shared\Project1C\sql" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\vm-shared\Project1C\testcase" />
-      <recent name="C:\vm-shared\Project1C\www" />
-      <recent name="C:\vm-shared\Project1C\handler" />
-      <recent name="C:\vm-shared\Project1C\model" />
-      <recent name="$PROJECT_DIR$/Project1C/js" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
-      <method />
-    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f9686685-548d-43ff-b7fa-d650c70662e6" name="Default" comment="" />
-      <created>1475046819673</created>
+      <changelist id="cddcc4f4-b169-4af4-b78d-ce11f6ad77dc" name="Default" comment="" />
+      <created>1479670931516</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1475046819673</updated>
-      <workItem from="1475046820915" duration="11074000" />
-      <workItem from="1475377595916" duration="28000" />
-      <workItem from="1475377926161" duration="2208000" />
-      <workItem from="1476033803329" duration="173000" />
-      <workItem from="1476160996224" duration="5729000" />
-      <workItem from="1476512756530" duration="2785000" />
-      <workItem from="1476645799092" duration="6547000" />
-      <workItem from="1476671342127" duration="6537000" />
-      <workItem from="1477102149632" duration="3628000" />
-      <workItem from="1477161279303" duration="18180000" />
-      <workItem from="1477265734054" duration="1338000" />
-      <workItem from="1478152677018" duration="3582000" />
-      <workItem from="1478156595217" duration="8112000" />
-      <workItem from="1478191392977" duration="1000" />
-      <workItem from="1478191561545" duration="38502000" />
-      <workItem from="1478233094744" duration="6783000" />
-      <workItem from="1478246228588" duration="2623000" />
-      <workItem from="1478291658770" duration="7353000" />
-      <workItem from="1478305841715" duration="25333000" />
-      <workItem from="1478373011013" duration="26578000" />
-      <workItem from="1478403057566" duration="52000" />
-      <workItem from="1478595055394" duration="1642000" />
-      <workItem from="1479000550186" duration="5311000" />
-      <workItem from="1479074840138" duration="10132000" />
-      <workItem from="1479088978659" duration="738000" />
-      <workItem from="1479102615715" duration="5100000" />
-      <workItem from="1479522291020" duration="1841000" />
-      <workItem from="1479588216531" duration="5022000" />
-      <workItem from="1479601240374" duration="5209000" />
+      <updated>1479670931516</updated>
+      <workItem from="1479670933414" duration="11000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212141000" />
+    <option name="totallyTimeSpent" value="11000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="874" y="264" width="2011" height="973" extended-state="1" />
-    <editor active="true" />
+    <frame x="874" y="264" width="2011" height="973" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18345864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32851636" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -356,434 +138,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="7" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Project1A/team.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="38" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1B/team.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1B/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1B/queries.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1B/violate.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31732">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/js/angular.min.js" />
-    <entry file="file://$PROJECT_DIR$/Project1C/www/css/MyTemplate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/js/npm.js" />
-    <entry file="file://$PROJECT_DIR$/Project1C/backend/test.php" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mysqli.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697">
-          <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/backend/insertMovie.php" />
-    <entry file="file://$PROJECT_DIR$/Project1B/load.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/SelectData.php" />
-    <entry file="file://$PROJECT_DIR$/Project1C/searchMovies.php" />
-    <entry file="file://$PROJECT_DIR$/Project1C/handler/getActorIdHandler.php" />
-    <entry file="file://$PROJECT_DIR$/Project1A/calculator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="50" column="27" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1B/query.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1B/create.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="43" column="59" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/sql/load.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/addComment.php" />
-    <entry file="file://$PROJECT_DIR$/Project1C/testcase/t1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/sql/create.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddActorMovieHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding>
-            <marker date="1478332473586" expanded="true" signature="119:266" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddDirectorMovieHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddMovieHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddMovieReviewHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchActorByIdHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchActorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchDirectorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchMovieByIdHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchMovieHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/searchReviewHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/selectActorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/selectDirectorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/selectMovieHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/AddActorDirectorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/handler/DataRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="n#SearchActorById#0;n#DataRequest#0;n#!!top" expanded="false" />
-            <marker date="1479601583949" expanded="true" signature="695:738" ph="SELECT * FRO... Movie" />
-            <marker date="1479601583949" expanded="true" signature="695:749" ph="SELECT * FRO... Movie" />
-            <marker date="1479601583949" expanded="true" signature="695:750" ph="SELECT * FRO... Movie" />
-            <marker date="1479601583949" expanded="true" signature="695:755" ph="SELECT * FRO... Movie" />
-            <marker date="1479601583949" expanded="true" signature="993:1043" ph="SELECT id FR... MaxMovieID" />
-            <marker date="1479601583949" expanded="true" signature="1249:1349" ph="INSERT INTO Movie... " />
-            <marker date="1479601583949" expanded="true" signature="1380:1421" ph="UPDATE MaxMo... " />
-            <marker date="1479601583949" expanded="true" signature="1676:1725" ph="INSERT INTO MovieGenre... " />
-            <marker date="1479601583949" expanded="true" signature="1676:1742" ph="INSERT INTO MovieGenre... " />
-            <marker date="1479601583949" expanded="true" signature="2510:2561" ph="SELECT id FR... MaxPersonID" />
-            <marker date="1479601583949" expanded="true" signature="2840:2940" ph="INSERT INTO Actor... " />
-            <marker date="1479601583949" expanded="true" signature="3006:3108" ph="INSERT INTO Actor... " />
-            <marker date="1479601583949" expanded="true" signature="3219:3309" ph="INSERT INTO Director... " />
-            <marker date="1479601583949" expanded="true" signature="3375:3467" ph="INSERT INTO Director... " />
-            <marker date="1479601583949" expanded="true" signature="3526:3569" ph="UPDATE MaxPe... " />
-            <marker date="1479601583949" expanded="true" signature="4158:4203" ph="SELECT * FRO... Movie" />
-            <marker date="1479601583949" expanded="true" signature="4767:4812" ph="SELECT * FRO... Actor" />
-            <marker date="1479601583949" expanded="true" signature="5380:5428" ph="SELECT * FRO... Director" />
-            <marker date="1479601583949" expanded="true" signature="6181:6206" ph="SELECT * FRO... Movie" />
-            <marker date="1479601583949" expanded="true" signature="6181:6533" ph="SELECT * FRO... Movie" />
-            <marker date="1479601583949" expanded="true" signature="7053:7306" ph="SELECT * FRO... Movie" />
-            <marker date="1479601583949" expanded="true" signature="7053:7974" ph="SELECT M.tit... Movie" />
-            <marker date="1479601583949" expanded="true" signature="7053:8031" ph="SELECT M.tit... Movie" />
-            <marker date="1479601583949" expanded="true" signature="7319:7639" ph="SELECT mid, MovieDirector" />
-            <marker date="1479601583949" expanded="true" signature="7712:7770" ph="SELECT mid, MovieGenre" />
-            <marker date="1479601583949" expanded="true" signature="7712:7797" ph="SELECT mid, MovieGenre" />
-            <marker date="1479601583949" expanded="true" signature="9294:9376" ph="SELECT * FRO... Actor" />
-            <marker date="1479601583949" expanded="true" signature="9442:9523" ph="SELECT * FRO... Actor" />
-            <marker date="1479601583949" expanded="true" signature="9992:9998" ph="SELECT * FRO... Actor" />
-            <marker date="1479601583949" expanded="true" signature="9992:10217" ph="SELECT * FRO... Actor" />
-            <marker date="1479601583949" expanded="true" signature="9992:10225" ph="SELECT * FRO... Actor" />
-            <marker date="1479601583949" expanded="true" signature="9992:10484" ph="SELECT * FRO... Actor" />
-            <marker date="1479601583949" expanded="true" signature="9992:10502" ph="SELECT * FRO... Actor" />
-            <marker date="1479601583949" expanded="true" signature="11026:11444" ph="SELECT * FRO... Actor" />
-            <marker date="1479601583949" expanded="true" signature="12659:12744" ph="SELECT * FRO... Director" />
-            <marker date="1479601583949" expanded="true" signature="12810:12894" ph="SELECT * FRO... Director" />
-            <marker date="1479601583949" expanded="true" signature="13365:13878" ph="SELECT * FRO... Director" />
-            <marker date="1479601583949" expanded="true" signature="14416:14440" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479601583949" expanded="true" signature="14416:14452" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479601583949" expanded="true" signature="14416:14453" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479601583949" expanded="true" signature="14416:14465" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479601583949" expanded="true" signature="14416:14496" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479601583949" expanded="true" signature="14747:14801" ph="INSERT INTO MovieActor... " />
-            <marker date="1479601583949" expanded="true" signature="14747:14809" ph="INSERT INTO MovieActor... " />
-            <marker date="1479601583949" expanded="true" signature="15358:15413" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479601583949" expanded="true" signature="15358:15417" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479601583949" expanded="true" signature="15664:15716" ph="INSERT INTO MovieActor... " />
-            <marker date="1479601583949" expanded="true" signature="16267:16274" ph="SELECT A.id,... Actor" />
-            <marker date="1479601583949" expanded="true" signature="16267:16538" ph="SELECT * FRO... Review" />
-            <marker date="1479601583949" expanded="true" signature="16371:16433" ph="SELECT mid, Review" />
-            <marker date="1479601583949" expanded="true" signature="17289:17383" ph="INSERT INTO Review... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/addActorMovie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="992">
-          <caret line="302" column="14" selection-start-line="302" selection-start-column="14" selection-end-line="302" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/addDirectorMovie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="99" column="10" selection-start-line="99" selection-start-column="10" selection-end-line="99" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/addMovie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1400">
-          <caret line="150" column="10" selection-start-line="150" selection-start-column="10" selection-end-line="150" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/Search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113">
-          <caret line="127" column="14" selection-start-line="127" selection-start-column="14" selection-end-line="127" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/showActorInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="111" column="10" selection-start-line="111" selection-start-column="10" selection-end-line="111" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/showMovieInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="214" column="32" selection-start-line="214" selection-start-column="32" selection-end-line="214" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/handler/DataRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="223" column="50" selection-start-line="223" selection-start-column="50" selection-end-line="223" selection-end-column="50" />
-          <folding>
-            <marker date="1479622677133" expanded="true" signature="695:750" ph="SELECT * FRO... Movie" />
-            <marker date="1479622677133" expanded="true" signature="993:1043" ph="SELECT id FR... MaxMovieID" />
-            <marker date="1479622677133" expanded="true" signature="1249:1349" ph="INSERT INTO Movie... " />
-            <marker date="1479622677133" expanded="true" signature="1380:1421" ph="UPDATE MaxMo... " />
-            <marker date="1479622677133" expanded="true" signature="1676:1742" ph="INSERT INTO MovieGenre... " />
-            <marker date="1479622677133" expanded="true" signature="2510:2561" ph="SELECT id FR... MaxPersonID" />
-            <marker date="1479622677133" expanded="true" signature="2840:2940" ph="INSERT INTO Actor... " />
-            <marker date="1479622677133" expanded="true" signature="3006:3108" ph="INSERT INTO Actor... " />
-            <marker date="1479622677133" expanded="true" signature="3219:3309" ph="INSERT INTO Director... " />
-            <marker date="1479622677133" expanded="true" signature="3375:3467" ph="INSERT INTO Director... " />
-            <marker date="1479622677133" expanded="true" signature="3526:3569" ph="UPDATE MaxPe... " />
-            <marker date="1479622677133" expanded="true" signature="4158:4203" ph="SELECT * FRO... Movie" />
-            <marker date="1479622677133" expanded="true" signature="4767:4812" ph="SELECT * FRO... Actor" />
-            <marker date="1479622677133" expanded="true" signature="5380:5428" ph="SELECT * FRO... Director" />
-            <marker date="1479622677133" expanded="true" signature="6181:6544" ph="SELECT * FRO... Movie" />
-            <marker date="1479622677133" expanded="true" signature="7064:8042" ph="SELECT M.tit... Movie" />
-            <marker date="1479622677133" expanded="true" signature="7330:7650" ph="SELECT mid, MovieDirector" />
-            <marker date="1479622677133" expanded="true" signature="7723:7808" ph="SELECT mid, MovieGenre" />
-            <marker date="1479622677133" expanded="true" signature="9305:9408" ph="SELECT * FRO... Actor" />
-            <marker date="1479622677133" expanded="true" signature="9474:9576" ph="SELECT * FRO... Actor" />
-            <marker date="1479622677133" expanded="true" signature="11079:11497" ph="SELECT A.id,... Actor" />
-            <marker date="1479622677133" expanded="true" signature="12712:12797" ph="SELECT * FRO... Director" />
-            <marker date="1479622677133" expanded="true" signature="12863:12947" ph="SELECT * FRO... Director" />
-            <marker date="1479622677133" expanded="true" signature="14469:14549" ph="SELECT * FRO... MovieActor" />
-            <marker date="1479622677133" expanded="true" signature="14800:14862" ph="INSERT INTO MovieActor... " />
-            <marker date="1479622677133" expanded="true" signature="15411:15466" ph="SELECT * FRO... MovieDirector" />
-            <marker date="1479622677133" expanded="true" signature="15717:15769" ph="INSERT INTO MovieDirector... " />
-            <marker date="1479622677133" expanded="true" signature="16320:16591" ph="SELECT * FRO... Review" />
-            <marker date="1479622677133" expanded="true" signature="16424:16486" ph="SELECT mid, Review" />
-            <marker date="1479622677133" expanded="true" signature="17342:17436" ph="INSERT INTO Review... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project1C/www/addActorDirector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-482">
-          <caret line="123" column="10" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/handler/AddActorDirectorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/addActorDirector.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-377">
-          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
