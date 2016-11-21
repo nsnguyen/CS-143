@@ -176,19 +176,29 @@ class DataRequest
         }
     }
 
-    public function SearchMovie($searchTitle){
-        $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
+    public function SearchMovie($searchTitleArry){
 
-        $titleStrip = str_replace(array('.', ',','\'','-'), '' , $searchTitle);
+        foreach ($searchTitleArry as &$value) {
+            $value = "'%".str_replace(array('.', ',','\'','-'), '' , $value)."%'";
+        }
+        unset($value);
+
+        $mysqli = new mysqli($this->server,$this->user,$this->pass,$this->database);
 
         if($mysqli->connect_errno){
             return($mysqli->connect_error);
         }
 
-
         //HACKY code.. so the rotation of the string FirstName+LastName to LastName+FirstName is just appending them together..
-        $result = $mysqli->query("SELECT * FROM Movie WHERE CONCAT(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(title,'\'',''),'-',''),'.',''),'\,',''),'\'',''),' ',''),',',''),
-                                    REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(title,'\'',''),'-',''),'.',''),'\,',''),'\'',''),' ',''),',','')) LIKE '%$titleStrip%' ORDER BY year DESC, title ASC");
+//        $result = $mysqli->query("SELECT * FROM Movie WHERE CONCAT(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(title,'\'',''),'-',''),'.',''),'\,',''),'\'',''),' ',''),',',''),
+//                                    REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(title,'\'',''),'-',''),'.',''),'\,',''),'\'',''),' ',''),',','')) LIKE '%$titleStrip%' ORDER BY year DESC, title ASC");
+
+        $titleSearch = "REPLACE(REPLACE(REPLACE(REPLACE(title,'\'',''),'\,',''),'-',''),'.','') LIKE ";
+
+        $titleSearch.= join(" AND REPLACE(REPLACE(REPLACE(REPLACE(title,'\'',''),'\,',''),'-',''),'.','') LIKE ",$searchTitleArry);
+
+
+        $result = $mysqli->query("SELECT * FROM Movie WHERE(".$titleSearch.") ORDER BY title;");
 
         if(!$result){
             return($mysqli->error);
@@ -235,7 +245,6 @@ class DataRequest
             return json_encode($rows);
         }
     }
-
 
 
     public function SearchActor($searchNameArry){

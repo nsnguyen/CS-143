@@ -7,14 +7,9 @@ $strExplodes = explode(" ",$searchTitle);
 
 $searchString = "";
 
-foreach($strExplodes as $val){
-    $searchString .= $val;
-}
-
-
-if($searchString !== ""){
+if(count($strExplodes) >0){
     $dataRequest = new DataRequest();
-    echo $dataRequest->SearchMovie($searchString);
+    echo $dataRequest->SearchMovie($strExplodes);
 }
 
 ?>
