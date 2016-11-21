@@ -156,16 +156,6 @@
                 return false;
             }
 
-            if(isValidDate(request.dob) == false){
-                document.getElementById('response').innerHTML = "Date of birth date format is invalid. Please use YYYY-MM-DD format.";
-                return;
-            }
-
-            if(isValidDate(request.dod) == false && request.dod != ""){
-                document.getElementById('response').innerHTML = "Date of death date format is invalid. Please use YYYY-MM-DD format.";
-                return;
-            }
-
             httpRequest.onreadystatechange = alertContents;
             httpRequest.open('GET', 'handler/AddActorDirectorHandler.php?ActorDirectorRadios='+encodeURI(request.type)+'&first='+encodeURI(request.first)+'&last='+encodeURI(request.last)+'&genderRadios='+encodeURI(request.gender)+'&dob='+encodeURI(request.dob)+'&dod='+encodeURI(request.dod),true);
             httpRequest.send();
@@ -181,11 +171,6 @@
                     alert('There was a problem with the request.');
                 }
             }
-        }
-
-        function isValidDate(dateString) {
-            var regEx = /^\d{4}-\d{2}-\d{2}$/;
-            return dateString.match(regEx) != null;
         }
 
     })();

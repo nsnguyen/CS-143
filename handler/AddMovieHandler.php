@@ -9,7 +9,7 @@ $genre = $_REQUEST['genre'];
 
 $genresArry = explode(",",$genre);
 
-if($title !== "" && $year !== "" && $company!=="" && $rating !=="" && count($genresArry)> 0){
+if($title !== "" && $year !== "" && $company!=="" && $rating !=="" && $genresArry[0] !==""){
     $dataRequest = new DataRequest();
     echo $dataRequest->InsertMovie($title,$year,$company,$rating,$genresArry);
 }
