@@ -1,30 +1,29 @@
-/*Count number of movies per actor has played in descending order.*/
-SELECT A.First, A.Last, Count(B.mid) CountMovie
-FROM Actor A JOIN MovieActor B
-    ON A.id = B.aid
-GROUP BY A.id
-ORDER BY Count(B.mid) DESC;
+USE CS143;
 
-/*Find the full name of the actor who is also a director in the movie they play in,
+/*the names of all the actors in the movie 'Die Another Day'.*/
+SELECT CONCAT(a.first, ' ', a.last) Actors
+FROM Actor a
+JOIN MovieActor ma ON a.id = ma.aid
+JOIN Movie m ON ma.mid = m.id
+WHERE m.title = 'Die Another Day';
+
+/*the count of all the actors who acted in multiple movies. which is more than one.*/
+SELECT COUNT(*)
+FROM (
+	SELECT a.id
+	FROM Actor a
+	JOIN MovieActor ma ON a.id = ma.aid
+	GROUP BY a.id
+	HAVING COUNT(ma.aid) > 1
+) a;
+
+/*Find the full name of the actor who died in the same year as the movie was made in 2000,
 as well as the corresponding name and year of the movie in descending movie year order. */
-SELECT A.First, A.Last, A.sex, M.title, M.year
-FROM Actor A
-  JOIN MovieActor MA
-    ON A.id = MA.aid
-  JOIN MovieDirector MD
-    ON MA.mid = MD.mid
-  JOIN Movie M
-    on M.id = MA.mid
-WHERE MA.aid = MD.did
-ORDER BY M.year DESC;
-
-/*Find the full name of the actor who died in the same year as the movie was made,
- as well as the corresponding name and year of the movie in descending movie year order. */
-SELECT A.first, A.last, A.dod, M.title, M.year
+SELECT CONCAT(A.first, ' ', A.last) Actors, A.dod, M.title, M.year
 FROM Actor A
   JOIN MovieActor MA
     ON A.id = MA.aid
   JOIN Movie M
     ON MA.mid = M.id
-WHERE A.dod IS NOT NULL AND year(A.dod) = M.year
+WHERE A.dod IS NOT NULL AND year(A.dod) = M.year AND year=2000
 ORDER BY M.year DESC;
