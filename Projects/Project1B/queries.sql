@@ -17,9 +17,8 @@ FROM (
 	HAVING COUNT(ma.aid) > 1
 ) a;
 
-/*Find the full name of the actor who died in the same year as the movie was made in 2000,
-as well as the corresponding name and year of the movie in descending movie year order. */
-SELECT CONCAT(A.first, ' ', A.last) Actors, A.dod, M.title, M.year
+/*Find the distinct full name of the actor who died in the same year as the movie that was made in year 2000 */
+SELECT DISTINCT CONCAT(A.first, ' ', A.last) Actors
 FROM Actor A
   JOIN MovieActor MA
     ON A.id = MA.aid
